@@ -1,0 +1,30 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Twilio",
+      "title": "Introduction to Webhooks",
+      "url": "https://www.twilio.com/docs/usage/webhooks"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Security",
+      "url": "https://www.twilio.com/docs/usage/security"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Twilio's webhook retry schedule. confirm. Not copied from the introduction.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "The list of ISO certificates on the Twilio security page. confirm. The page title opened. The certificate names were not read.",
+      "url": null
+    }
+  ]
+}

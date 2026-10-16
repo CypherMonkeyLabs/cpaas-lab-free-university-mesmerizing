@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Twilio",
+      "title": "Emergency Calling for SIP Trunking",
+      "url": "https://www.twilio.com/docs/sip-trunking/emergency-calling"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Emergency Calling for Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice/tutorials/emergency-calling-for-programmable-voice"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Enhanced 911",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_911"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Public safety answering point",
+      "url": "https://en.wikipedia.org/wiki/Public-safety_answering_point"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Emergency behavior for a Twilio number outside the countries named on the page. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Programmable Voice emergency click-path. confirm. The page opened. The steps were not copied beyond the title.",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "SMS",
+      "url": "https://en.wikipedia.org/wiki/Short_Message_Service"
+    },
+    {
+      "kind": "Sinch",
+      "title": "Sinch SMS overview",
+      "url": "https://developers.sinch.com/docs/sms/overview"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Bird",
+      "title": "Get started with Bird",
+      "url": "https://bird.com/docs"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Bandwidth's exact character limits. confirm. The messaging guide points at another page that was not opened.",
+      "url": null
+    }
+  ]
+}

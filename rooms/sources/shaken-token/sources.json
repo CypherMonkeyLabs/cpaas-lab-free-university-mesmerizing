@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "STIR/SHAKEN",
+      "url": "https://en.wikipedia.org/wiki/STIR/SHAKEN"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 8225, PASSporT",
+      "url": "https://www.rfc-editor.org/rfc/rfc8225"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 8224, authenticated identity management in SIP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8224"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "SIP trunking",
+      "url": "https://en.wikipedia.org/wiki/SIP_trunking"
+    },
+    {
+      "kind": "Confirm",
+      "title": "FCC call-authentication page. confirm. The request returned HTTP 403.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "The exact Base64 details beyond the article's summary. confirm if you need a byte layout. Read RFC 8225 for that work.",
+      "url": null
+    }
+  ]
+}

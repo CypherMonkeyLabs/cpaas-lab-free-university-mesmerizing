@@ -1,0 +1,50 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Asterisk (software)",
+      "url": "https://en.wikipedia.org/wiki/Asterisk_(PBX)"
+    },
+    {
+      "kind": "Asterisk",
+      "title": "Asterisk dialplan",
+      "url": "https://docs.asterisk.org/Configuration/Dialplan/"
+    },
+    {
+      "kind": "Asterisk",
+      "title": "Asterisk documentation overview",
+      "url": "https://docs.asterisk.org/About-the-Project/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Direct inward dial",
+      "url": "https://en.wikipedia.org/wiki/Direct_inward_dial"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "SIP trunking",
+      "url": "https://en.wikipedia.org/wiki/SIP_trunking"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Emergency Calling for SIP Trunking",
+      "url": "https://www.twilio.com/docs/sip-trunking/emergency-calling"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Emergency Services",
+      "url": "https://dev.bandwidth.com/docs/emergency/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "CUCM and UCCE menus. confirm. Those Cisco pages were not opened.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "A dual-run duration. confirm.",
+      "url": null
+    }
+  ]
+}

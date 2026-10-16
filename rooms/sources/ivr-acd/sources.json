@@ -1,0 +1,40 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Twilio docs home",
+      "url": "https://www.twilio.com/docs"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth home",
+      "url": "https://www.bandwidth.com/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "TaskRouter attributes. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Salesforce field mapping. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Service-level formulas. confirm. Not opened.",
+      "url": null
+    }
+  ]
+}

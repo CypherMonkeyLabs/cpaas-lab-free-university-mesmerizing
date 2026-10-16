@@ -1,0 +1,25 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Plivo",
+      "title": "Plivo docs home",
+      "url": "https://www.plivo.com/docs/"
+    },
+    {
+      "kind": "Plivo",
+      "title": "Plivo WhatsApp prerequisites",
+      "url": "https://www.plivo.com/docs/messaging/concepts/whatsapp/prerequisites"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Plivo WhatsApp platform-fee amounts. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Plivo voice and SMS prices. confirm. Not on the pages that were read.",
+      "url": null
+    }
+  ]
+}

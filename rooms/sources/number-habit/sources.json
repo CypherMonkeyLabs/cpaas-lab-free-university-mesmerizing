@@ -1,0 +1,25 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Telnyx",
+      "title": "Send your first Telnyx message",
+      "url": "https://developers.telnyx.com/docs/messaging/messages/send-message"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "E.164",
+      "url": "https://en.wikipedia.org/wiki/E.164"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Telnyx or Bandwidth monthly number price. confirm. Not on the guides that opened.",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "E.164",
+      "url": "https://en.wikipedia.org/wiki/E.164"
+    },
+    {
+      "kind": "ITU",
+      "title": "ITU-T E.164, the international public telecommunication numbering plan",
+      "url": "https://www.itu.int/rec/T-REC-E.164"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Direct inward dial",
+      "url": "https://en.wikipedia.org/wiki/Direct_inward_dial"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 3966, the tel URI",
+      "url": "https://www.rfc-editor.org/rfc/rfc3966"
+    },
+    {
+      "kind": "Confirm",
+      "title": "A country's current numbering-plan exception. confirm. Not opened beyond the general E.164 text.",
+      "url": null
+    }
+  ]
+}

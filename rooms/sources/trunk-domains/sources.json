@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "SIP trunking",
+      "url": "https://en.wikipedia.org/wiki/SIP_trunking"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Elastic SIP Trunking",
+      "url": "https://www.twilio.com/docs/sip-trunking"
+    },
+    {
+      "kind": "Telnyx",
+      "title": "Telnyx SIP trunking overview",
+      "url": "https://developers.telnyx.com/docs/voice/sip-trunking/get-started"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 7092, taxonomy of SIP back-to-back user agents",
+      "url": "https://www.rfc-editor.org/rfc/rfc7092"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Telnyx signaling addresses, media ranges, and ports. confirm. The guide points at sip.telnyx.com, which was not opened.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Twilio calls-per-second numeric limit. confirm. The page name opened. The number did not.",
+      "url": null
+    }
+  ]
+}

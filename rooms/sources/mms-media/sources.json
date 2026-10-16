@@ -1,0 +1,25 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Multimedia Messaging Service",
+      "url": "https://en.wikipedia.org/wiki/Multimedia_Messaging_Service"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "SMS",
+      "url": "https://en.wikipedia.org/wiki/Short_Message_Service"
+    },
+    {
+      "kind": "Confirm",
+      "title": "MMS size limits for Twilio, Vonage, Sinch, Telnyx, Plivo, Infobip, or Bird. confirm. Not opened as a number.",
+      "url": null
+    }
+  ]
+}

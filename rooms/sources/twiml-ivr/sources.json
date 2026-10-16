@@ -1,0 +1,40 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Interactive voice response",
+      "url": "https://en.wikipedia.org/wiki/Interactive_voice_response"
+    },
+    {
+      "kind": "Twilio",
+      "title": "TwiML for Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice/twiml"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 4733, RTP payload for DTMF",
+      "url": "https://www.rfc-editor.org/rfc/rfc4733"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage Voice API",
+      "url": "https://developer.vonage.com/en/voice/voice-api/overview"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Vonage NCCO verb list. confirm. The Voice page names an NCCO reference. That reference was not opened.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "A TwiML Pay price. confirm.",
+      "url": null
+    }
+  ]
+}

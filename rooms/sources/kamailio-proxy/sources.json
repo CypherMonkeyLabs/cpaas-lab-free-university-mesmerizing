@@ -1,0 +1,40 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Kamailio",
+      "url": "https://en.wikipedia.org/wiki/Kamailio"
+    },
+    {
+      "kind": "Kamailio",
+      "title": "Kamailio documentation",
+      "url": "https://www.kamailio.org/w/documentation/"
+    },
+    {
+      "kind": "Kamailio",
+      "title": "Kamailio wiki documentation",
+      "url": "https://www.kamailio.org/wikidocs/"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 3261, SIP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3261"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 3550, RTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3550"
+    },
+    {
+      "kind": "Confirm",
+      "title": "OpenSIPS current documentation. confirm. Not opened.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "A least-cost rate table. confirm.",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Twilio",
+      "title": "Twilio docs home",
+      "url": "https://www.twilio.com/docs"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Twilio Video",
+      "url": "https://www.twilio.com/docs/video"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage API Developer",
+      "url": "https://developer.vonage.com/en/home"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage Voice API",
+      "url": "https://developer.vonage.com/en/voice/voice-api/overview"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Voice",
+      "url": "https://dev.bandwidth.com/docs/voice/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Vonage Video API details beyond the navigation label. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Twilio Video room-size limits. confirm. Not read.",
+      "url": null
+    }
+  ]
+}

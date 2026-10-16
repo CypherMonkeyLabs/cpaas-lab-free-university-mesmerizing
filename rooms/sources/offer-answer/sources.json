@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "RFC",
+      "title": "RFC 3264, offer/answer with SDP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3264"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 8866, SDP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8866"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Session Initiation Protocol",
+      "url": "https://en.wikipedia.org/wiki/Session_Initiation_Protocol"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 3966, the tel URI",
+      "url": "https://www.rfc-editor.org/rfc/rfc3966"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 4733, RTP payload for DTMF",
+      "url": "https://www.rfc-editor.org/rfc/rfc4733"
+    },
+    {
+      "kind": "Confirm",
+      "title": "A codec price list. confirm. None of these RFCs is a tariff.",
+      "url": null
+    }
+  ]
+}
