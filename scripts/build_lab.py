@@ -20,8 +20,11 @@ NAV = [
     ("play.html", "Play", "A short drill in this browser.", "play"),
     ("listen.html", "Listen", "Read-along notes for the guide.", "listen"),
     ("downloads.html", "Downloads", "Sheets, cards, and one zip.", "downloads"),
+    ("quizzes.html", "Quizzes", "True or false from the lessons.", "play"),
+    ("flashcards.html", "Flashcards", "Terms from the lessons.", "downloads"),
     ("ecosystem.html", "Ecosystem", "Glossary, bridges, and sister labs.", "eco"),
     ("help.html", "Help", "How the menu, course, and bot work.", "help"),
+    ("legal.html", "Legal", "Study notes and trademarks.", "help"),
 ]
 
 ICONS = {
@@ -99,8 +102,16 @@ def go_deeper(rows, json_href, md_href=None):
     )
 
 
-def footer():
-    return f"""<footer class="site-footer lab-footer wrap" data-canon-footer><aside class="disclaimer-panel" aria-labelledby="disc-title"><span class="disclaimer-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4.5 5.5v5.8c0 4.6 3.1 8.6 7.5 10.2 4.4-1.6 7.5-5.6 7.5-10.2V5.5z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.6"/><path d="M8.2 12.2 11 15l4.8-5.2" fill="none" stroke="#0f766e" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><h2 id="disc-title">A note from the student behind this lab</h2><p>This is an <strong>independent, free, learning-only student project</strong>. These are study notes. They are <strong>not vendor documentation and not legal advice</strong>. Twilio, Vonage, Bandwidth, Sinch, Telnyx, Plivo, Infobip, Bird, MessageBird, and the open-source project names are trademarks of their owners. It is <strong>not affiliated with or endorsed by</strong> any of them.</p><p>If anyone has a concern, the content will be removed or corrected promptly via the contact form at <a href="{BRAND}/#contact">{BRAND}/#contact</a>. Nothing here is sold. I am happy to volunteer for any organization.</p><p>Emergency-calling and call-recording chapters are study notes. They are not an emergency plan. Rules differ by country and by the system you run. Figures that depend on a release are marked confirm.</p></div></aside><p class="footer-brand">CypherMonkey Labs</p><nav class="brand-row brand-icons" aria-label="CypherMonkey Labs"><a class="brand-icon brand-web" href="{BRAND}" aria-label="CypherMonkey Labs website"><svg viewBox="0 0 64 64" class="monkey-icon" aria-hidden="true"><defs><radialGradient id="mh" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#ffd9a0"/><stop offset=".5" stop-color="#e8903a"/><stop offset="1" stop-color="#8a3f10"/></radialGradient></defs><circle cx="14" cy="34" r="7" fill="url(#mh)"/><circle cx="50" cy="34" r="7" fill="url(#mh)"/><circle cx="32" cy="32" r="18" fill="url(#mh)"/><ellipse cx="32" cy="38" rx="10" ry="8" fill="#fde68a"/><circle cx="26" cy="31" r="2" fill="#2a1406"/><circle cx="38" cy="31" r="2" fill="#2a1406"/><circle cx="26" cy="31" r="6" fill="#e0f2fe" opacity=".45" stroke="#fde047" stroke-width="1.6"/><circle cx="38" cy="31" r="6" fill="#e0f2fe" opacity=".45" stroke="#fde047" stroke-width="1.6"/><path d="M27 42 q5 4 10 0" fill="none" stroke="#7c2d12" stroke-width="1.6" stroke-linecap="round"/></svg></a><a class="brand-icon brand-gh" href="{REPO}" aria-label="CypherMonkey Labs on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.22 3.38 9.65 8.07 11.22.59.12.8-.26.8-.57v-2.02c-3.28.73-3.97-1.42-3.97-1.42-.53-1.38-1.3-1.75-1.3-1.75-1.07-.75.08-.73.08-.73 1.18.08 1.8 1.24 1.8 1.24 1.05 1.84 2.76 1.31 3.43.99.1-.78.41-1.31.75-1.61-2.62-.31-5.37-1.34-5.37-5.98 0-1.32.46-2.4 1.22-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.33 3.3 1.25a11.3 11.3 0 0 1 6 0c2.3-1.58 3.3-1.25 3.3-1.25.65 1.65.24 2.88.12 3.18.76.85 1.22 1.93 1.22 3.25 0 4.65-2.76 5.66-5.39 5.96.42.38.8 1.12.8 2.26v3.35c0 .31.21.7.81.57A11.52 11.52 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5z"/></svg></a><a class="brand-icon brand-tree" href="{TREE}" aria-label="CypherMonkey on Linktree"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><filter id="zta-tree-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs><g filter="url(#zta-tree-glow)" fill="#bbf7d0"><circle cx="32" cy="10" r="7"/><rect x="29" y="14" width="6" height="12" rx="3"/><circle cx="14" cy="30" r="6.5"/><circle cx="50" cy="30" r="6.5"/><rect x="16" y="27" width="32" height="6" rx="3"/><rect x="29" y="30" width="6" height="12" rx="3"/><circle cx="12" cy="46" r="6.5"/><circle cx="52" cy="46" r="6.5"/><rect x="14" y="43" width="36" height="6" rx="3"/><rect x="27" y="46" width="10" height="14" rx="5"/></g><g fill="#f7fee7" stroke="#052e16" stroke-width="1.6" stroke-linejoin="round"><circle cx="32" cy="10" r="7"/><rect x="29" y="14" width="6" height="12" rx="3"/><circle cx="14" cy="30" r="6.5"/><circle cx="50" cy="30" r="6.5"/><rect x="16" y="27" width="32" height="6" rx="3"/><rect x="29" y="30" width="6" height="12" rx="3"/><circle cx="12" cy="46" r="6.5"/><circle cx="52" cy="46" r="6.5"/><rect x="14" y="43" width="36" height="6" rx="3"/><rect x="27" y="46" width="10" height="14" rx="5"/></g></svg></a></nav><p class="site-copy">© 2026 CypherMonkeyLabs 🐒</p></footer>"""
+def footer(depth):
+    p = prefix(depth)
+    more = (
+        f'<nav class="footer-meta" aria-label="More pages">'
+        f'<a href="{p}quizzes.html">Quizzes</a>'
+        f'<a href="{p}flashcards.html">Flashcards</a>'
+        f'<a href="{p}legal.html">Legal</a>'
+        f"</nav>"
+    )
+    return f"""<footer class="site-footer lab-footer wrap" data-canon-footer><aside class="disclaimer-panel" aria-labelledby="disc-title"><span class="disclaimer-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5 4.5 5.5v5.8c0 4.6 3.1 8.6 7.5 10.2 4.4-1.6 7.5-5.6 7.5-10.2V5.5z" fill="currentColor" opacity=".18" stroke="currentColor" stroke-width="1.6"/><path d="M8.2 12.2 11 15l4.8-5.2" fill="none" stroke="#0f766e" stroke-width="1.8" stroke-linecap="round"/></svg></span><div><h2 id="disc-title">A note from the student behind this lab</h2><p>This is an <strong>independent, free, learning-only student project</strong>. These are study notes. They are <strong>not vendor documentation and not legal advice</strong>. Twilio, Vonage, Bandwidth, Sinch, Telnyx, Plivo, Infobip, Bird, MessageBird, and the open-source project names are trademarks of their owners. It is <strong>not affiliated with or endorsed by</strong> any of them.</p><p>If anyone has a concern, the content will be removed or corrected promptly via the contact form at <a href="{BRAND}/#contact">{BRAND}/#contact</a>. Nothing here is sold. I am happy to volunteer for any organization.</p><p>Emergency-calling and call-recording chapters are study notes. They are not an emergency plan. Rules differ by country and by the system you run. Figures that depend on a release are marked confirm.</p></div></aside>{more}<p class="footer-brand">CypherMonkey Labs</p><nav class="brand-row brand-icons" aria-label="CypherMonkey Labs"><a class="brand-icon brand-web" href="{BRAND}" aria-label="CypherMonkey Labs website"><svg viewBox="0 0 64 64" class="monkey-icon" aria-hidden="true"><defs><radialGradient id="mh" cx="38%" cy="30%" r="80%"><stop offset="0" stop-color="#ffd9a0"/><stop offset=".5" stop-color="#e8903a"/><stop offset="1" stop-color="#8a3f10"/></radialGradient></defs><circle cx="14" cy="34" r="7" fill="url(#mh)"/><circle cx="50" cy="34" r="7" fill="url(#mh)"/><circle cx="32" cy="32" r="18" fill="url(#mh)"/><ellipse cx="32" cy="38" rx="10" ry="8" fill="#fde68a"/><circle cx="26" cy="31" r="2" fill="#2a1406"/><circle cx="38" cy="31" r="2" fill="#2a1406"/><circle cx="26" cy="31" r="6" fill="#e0f2fe" opacity=".45" stroke="#fde047" stroke-width="1.6"/><circle cx="38" cy="31" r="6" fill="#e0f2fe" opacity=".45" stroke="#fde047" stroke-width="1.6"/><path d="M27 42 q5 4 10 0" fill="none" stroke="#7c2d12" stroke-width="1.6" stroke-linecap="round"/></svg></a><a class="brand-icon brand-gh" href="{REPO}" aria-label="CypherMonkey Labs on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5A11.5 11.5 0 0 0 .5 12.3c0 5.22 3.38 9.65 8.07 11.22.59.12.8-.26.8-.57v-2.02c-3.28.73-3.97-1.42-3.97-1.42-.53-1.38-1.3-1.75-1.3-1.75-1.07-.75.08-.73.08-.73 1.18.08 1.8 1.24 1.8 1.24 1.05 1.84 2.76 1.31 3.43.99.1-.78.41-1.31.75-1.61-2.62-.31-5.37-1.34-5.37-5.98 0-1.32.46-2.4 1.22-3.25-.12-.3-.53-1.53.12-3.18 0 0 1-.33 3.3 1.25a11.3 11.3 0 0 1 6 0c2.3-1.58 3.3-1.25 3.3-1.25.65 1.65.24 2.88.12 3.18.76.85 1.22 1.93 1.22 3.25 0 4.65-2.76 5.66-5.39 5.96.42.38.8 1.12.8 2.26v3.35c0 .31.21.7.81.57A11.52 11.52 0 0 0 23.5 12.3 11.5 11.5 0 0 0 12 .5z"/></svg></a><a class="brand-icon brand-tree" href="{TREE}" aria-label="CypherMonkey on Linktree"><svg viewBox="0 0 64 64" aria-hidden="true"><defs><filter id="zta-tree-glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.2"/></filter></defs><g filter="url(#zta-tree-glow)" fill="#bbf7d0"><circle cx="32" cy="10" r="7"/><rect x="29" y="14" width="6" height="12" rx="3"/><circle cx="14" cy="30" r="6.5"/><circle cx="50" cy="30" r="6.5"/><rect x="16" y="27" width="32" height="6" rx="3"/><rect x="29" y="30" width="6" height="12" rx="3"/><circle cx="12" cy="46" r="6.5"/><circle cx="52" cy="46" r="6.5"/><rect x="14" y="43" width="36" height="6" rx="3"/><rect x="27" y="46" width="10" height="14" rx="5"/></g><g fill="#f7fee7" stroke="#052e16" stroke-width="1.6" stroke-linejoin="round"><circle cx="32" cy="10" r="7"/><rect x="29" y="14" width="6" height="12" rx="3"/><circle cx="14" cy="30" r="6.5"/><circle cx="50" cy="30" r="6.5"/><rect x="16" y="27" width="32" height="6" rx="3"/><rect x="29" y="30" width="6" height="12" rx="3"/><circle cx="12" cy="46" r="6.5"/><circle cx="52" cy="46" r="6.5"/><rect x="14" y="43" width="36" height="6" rx="3"/><rect x="27" y="46" width="10" height="14" rx="5"/></g></svg></a></nav><p class="site-copy">© 2026 CypherMonkeyLabs 🐒</p></footer>"""
 
 
 def phone(depth):
@@ -197,7 +208,7 @@ def chrome_open(title, desc, depth, current):
 def chrome_close(depth):
     p = prefix(depth)
     return f"""</main>
-{footer()}
+{footer(depth)}
 {phone(depth)}
 <script src="{p}assets/js/frame.js"></script>
 <script src="{p}assets/js/university.js"></script>
@@ -607,7 +618,7 @@ def build_hubs():
 <section><h2>No secrets</h2>
 <p>Do not paste tokens, client secrets, or customer records into these pages.</p></section>
 </div>'''
-    page("legal.html", "Legal", "Study notes and trademarks.", 0, "help.html", legal)
+    page("legal.html", "Legal", "Study notes and trademarks.", 0, "legal.html", legal)
 
     # ecosystem
     terms = glossary()
@@ -670,7 +681,7 @@ def build_hubs():
                 f'<button type="button" class="choice ghost" data-choice="False">False</button>'
                 f'<p class="quiz-note" hidden>{e(note)}</p></div>'
             )
-    page("quizzes.html", "Quizzes", "Questions from the lessons.", 0, "play.html",
+    page("quizzes.html", "Quizzes", "Questions from the lessons.", 0, "quizzes.html",
          f'<div class="wrap"><h1>Quizzes</h1><p class="lede">{len(blocks)} questions, two from each lesson.</p>{"".join(blocks)}</div>')
 
     # charts — counts only
@@ -713,7 +724,7 @@ def build_hubs():
           "<p>These are study notes, not vendor documentation and not legal advice. learning-only student project. "
           f"<a href=\"{BRAND}/#contact\">{BRAND}/#contact</a> "
           f"<a href=\"{REPO}\">{REPO}</a> <a href=\"{TREE}\">{TREE}</a></p></body></html>")
-    page("flashcards.html", "Flashcards", "Terms from the lessons.", 0, "downloads.html",
+    page("flashcards.html", "Flashcards", "Terms from the lessons.", 0, "flashcards.html",
          f'<div class="wrap"><h1>Flashcards</h1><p class="lede">{len(cards)} terms. The same card is also in the JSON download.</p>'
          f'<p><a href="downloads/flashcards.json">JSON</a> · <a href="downloads/flashcards.html">Printable HTML</a></p>{card_html}</div>')
 

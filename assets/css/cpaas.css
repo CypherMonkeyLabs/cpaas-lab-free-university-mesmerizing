@@ -59,6 +59,9 @@ body.home-world .section-rail {
   .hero-stage .hero-3d { display: none; }
   .canon-banner { min-height: 72px; }
   .section-chip .chip-desc { max-width: 11rem; }
+  /* The closed mascot is only a corner. A wider hero ends above that corner,
+     so the first-visit tour card can sit under the opening lines. */
+  .hero-band.wrap { width: calc(100% + 60px); max-width: none; }
 }
 .mini-chart { margin: 8px 0 18px; }
 .five ul { line-height: 1.45; }

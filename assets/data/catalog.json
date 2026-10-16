@@ -57,6 +57,22 @@
       ]
     },
     {
+      "title": "Quizzes",
+      "href": "quizzes.html",
+      "blurb": "True or false from the lessons.",
+      "keys": [
+        "quizzes"
+      ]
+    },
+    {
+      "title": "Flashcards",
+      "href": "flashcards.html",
+      "blurb": "Terms from the lessons.",
+      "keys": [
+        "flashcards"
+      ]
+    },
+    {
       "title": "Ecosystem",
       "href": "ecosystem.html",
       "blurb": "Glossary, bridges, and sister labs.",
@@ -70,6 +86,14 @@
       "blurb": "How the menu, course, and bot work.",
       "keys": [
         "help"
+      ]
+    },
+    {
+      "title": "Legal",
+      "href": "legal.html",
+      "blurb": "Study notes and trademarks.",
+      "keys": [
+        "legal"
       ]
     },
     {

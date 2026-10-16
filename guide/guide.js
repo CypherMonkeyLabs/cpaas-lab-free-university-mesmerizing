@@ -146,6 +146,10 @@
   });
   monkey.addEventListener("click", function () {
     if (suppressClick) { suppressClick = false; return; }
+    if (isPhone() && tour && !tour.hidden) {
+      endTour(true);
+      return;
+    }
     openPanel(panel.hidden);
   });
 
@@ -575,11 +579,24 @@
     tour.querySelector("[data-next]").textContent = stepAt === steps.length - 1 ? "Done" : "Next";
     var header = band(".uc-top");
     var phone = band(".phone-bar");
+    var mascot = band(".bot-dock:not(.is-open) .monkey-btn");
     var banner = band(".canon-banner");
     var gap = 12;
+    card.style.width = "";
+    card.style.maxHeight = "";
     var cardH = card.offsetHeight;
     var roomTop = Math.max(header ? header.bottom : 8, banner ? banner.bottom : 0) + gap;
-    var roomBottom = (phone ? phone.top : window.innerHeight) - gap;
+    var roomBottom = window.innerHeight - gap;
+    if (phone && phone.top - gap < roomBottom) roomBottom = phone.top - gap;
+    var besideMascot = isPhone() && mascot && mascot.left > 80;
+    if (besideMascot) {
+      var side = 12;
+      var rightLimit = Math.round(mascot.left - gap);
+      card.style.width = Math.max(180, rightLimit - side) + "px";
+      card.style.left = side + "px";
+      card.style.right = "auto";
+      card.style.transform = "none";
+    }
     var hero = document.querySelector("main h1");
     var heroBox = hero ? hero.getBoundingClientRect() : null;
     function hitsHero(candidate) {
@@ -590,11 +607,12 @@
     var firstLines = document.querySelector("main .lede, main .kicker + h1 + p, main h1 + p");
     var guardBox = firstLines ? firstLines.getBoundingClientRect() : heroBox;
     var guardBottom = guardBox && guardBox.height > 8 ? guardBox.bottom : (heroBox ? heroBox.bottom : roomTop);
+    var floor = 8;
     if (isPhone()) {
-      var floor = Math.max(roomTop, Math.round(guardBottom + gap));
-      card.style.maxHeight = Math.max(120, roomBottom - floor) + "px";
+      floor = Math.max(roomTop, Math.round(guardBottom + gap));
+      card.style.maxHeight = Math.max(96, roomBottom - floor) + "px";
       cardH = card.offsetHeight;
-      top = Math.max(floor, roomBottom - cardH);
+      top = roomBottom - cardH;
       if (top < floor) top = floor;
     } else if (hitsHero(top)) {
       var belowHero = heroBox.bottom + gap;
@@ -602,16 +620,30 @@
       if (belowHero >= roomTop && belowHero + cardH <= roomBottom) top = belowHero;
       else if (aboveHero >= roomTop) top = aboveHero;
     }
-    if (!isPhone() && top + cardH > roomBottom) top = roomBottom - cardH;
-    if (top < 8) top = 8;
-    if (top + cardH > window.innerHeight - 8) {
-      card.style.maxHeight = Math.max(120, window.innerHeight - 16 - top) + "px";
+    if (top + cardH > roomBottom) {
+      card.style.maxHeight = Math.max(72, roomBottom - Math.max(floor, roomTop)) + "px";
       cardH = card.offsetHeight;
-      if (top + cardH > window.innerHeight - 8) top = Math.max(8, window.innerHeight - 8 - cardH);
+      top = roomBottom - cardH;
     }
-    card.style.left = "50%";
-    card.style.right = "auto";
-    card.style.transform = "translateX(-50%)";
+    if (top < floor && floor + cardH <= roomBottom) top = floor;
+    if (top < 8) top = 8;
+    if (isPhone() && guardBox && guardBox.height > 8 && top < guardBottom) {
+      var limitTop = Math.round(guardBottom + 4);
+      var limitBottom = phone ? Math.round(phone.top - 4) : roomBottom;
+      var slot = limitBottom - limitTop;
+      if (slot >= 56) {
+        card.style.maxHeight = slot + "px";
+        cardH = card.offsetHeight;
+        top = limitBottom - cardH;
+        if (top < limitTop) top = limitTop;
+      }
+    }
+    if (!besideMascot) {
+      card.style.width = "";
+      card.style.left = "50%";
+      card.style.right = "auto";
+      card.style.transform = "translateX(-50%)";
+    }
     card.style.top = Math.round(top) + "px";
   }
   function showTour() {
@@ -637,6 +669,14 @@
     placeTour();
   });
   tour.querySelector("[data-skip]").addEventListener("click", function () { endTour(true); });
+  tour.addEventListener("click", function (event) {
+    if (!isPhone() || tour.hidden) return;
+    var box = monkey.getBoundingClientRect();
+    var hit = event.clientX >= box.left && event.clientX <= box.right && event.clientY >= box.top && event.clientY <= box.bottom;
+    if (!hit) return;
+    event.preventDefault();
+    endTour(true);
+  });
   window.addEventListener("resize", function () { if (!tour.hidden) placeTour(); });
   document.querySelectorAll("[data-tour-open]").forEach(function (btn) {
     btn.addEventListener("click", function () { showTour(); });
