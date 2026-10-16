@@ -1,0 +1,25 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Twilio",
+      "url": "https://en.wikipedia.org/wiki/Twilio"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Vonage",
+      "url": "https://en.wikipedia.org/wiki/Vonage"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage API Developer",
+      "url": "https://developer.vonage.com/en/home"
+    },
+    {
+      "kind": "Confirm",
+      "title": "A current Twilio or Vonage retail price. confirm. Not on the articles or the developer home that opened.",
+      "url": null
+    }
+  ]
+}

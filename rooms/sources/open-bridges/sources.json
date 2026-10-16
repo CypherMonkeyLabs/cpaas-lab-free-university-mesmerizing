@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Kamailio",
+      "url": "https://en.wikipedia.org/wiki/Kamailio"
+    },
+    {
+      "kind": "Matrix",
+      "title": "Matrix specification",
+      "url": "https://spec.matrix.org/latest/"
+    },
+    {
+      "kind": "Jami",
+      "title": "Jami",
+      "url": "https://jami.net/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Jami (software)",
+      "url": "https://en.wikipedia.org/wiki/Jami_(software)"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth home",
+      "url": "https://www.bandwidth.com/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Customer quotes and field maps for the named integrations. confirm.",
+      "url": null
+    }
+  ]
+}

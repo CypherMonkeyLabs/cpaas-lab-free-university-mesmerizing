@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Real-time Transport Protocol",
+      "url": "https://en.wikipedia.org/wiki/Real-time_Transport_Protocol"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 3550, RTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3550"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 3711, SRTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3711"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 8825, real-time protocols for browser-based applications",
+      "url": "https://www.rfc-editor.org/rfc/rfc8825"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "WebRTC",
+      "url": "https://en.wikipedia.org/wiki/WebRTC"
+    },
+    {
+      "kind": "Confirm",
+      "title": "ICE, STUN, or TURN port numbers. confirm. The names are on the WebRTC article. Their RFCs were not opened.",
+      "url": null
+    }
+  ]
+}

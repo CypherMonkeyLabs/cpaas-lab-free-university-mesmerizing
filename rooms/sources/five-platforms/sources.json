@@ -1,0 +1,50 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "Bandwidth Inc.",
+      "url": "https://en.wikipedia.org/wiki/Bandwidth_Inc."
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth home",
+      "url": "https://www.bandwidth.com/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Sinch AB",
+      "url": "https://en.wikipedia.org/wiki/Sinch_AB"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Telnyx",
+      "url": "https://en.wikipedia.org/wiki/Telnyx"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Infobip",
+      "url": "https://en.wikipedia.org/wiki/Infobip"
+    },
+    {
+      "kind": "Bird",
+      "title": "Get started with Bird",
+      "url": "https://bird.com/docs"
+    },
+    {
+      "kind": "MessageBird",
+      "title": "MessageBird developers",
+      "url": "https://developers.messagebird.com/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "MessageBird Wikipedia article. confirm. HTTP 404.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "A current price for Bandwidth, Sinch, Telnyx, Infobip, or Bird. confirm.",
+      "url": null
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Jitsi",
+      "title": "Jitsi Meet handbook introduction",
+      "url": "https://jitsi.github.io/handbook/docs/intro"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Jitsi",
+      "url": "https://en.wikipedia.org/wiki/Jitsi"
+    },
+    {
+      "kind": "Matrix",
+      "title": "Matrix specification",
+      "url": "https://spec.matrix.org/latest/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Matrix (protocol)",
+      "url": "https://en.wikipedia.org/wiki/Matrix_(protocol)"
+    },
+    {
+      "kind": "Jami",
+      "title": "Jami",
+      "url": "https://jami.net/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Jami (software)",
+      "url": "https://en.wikipedia.org/wiki/Jami_(software)"
+    },
+    {
+      "kind": "LiveKit",
+      "title": "LiveKit telephony introduction",
+      "url": "https://docs.livekit.io/telephony/"
+    },
+    {
+      "kind": "LiveKit",
+      "title": "LiveKit documentation overview",
+      "url": "https://docs.livekit.io/intro/overview/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Jitsi dial-in numbers. confirm. Not on the introduction.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Matrix bridge implementations by name. confirm. The spec introduction names bridging and does not list vendors.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Certification exams for these projects. confirm. No exam page was opened.",
+      "url": null
+    }
+  ]
+}

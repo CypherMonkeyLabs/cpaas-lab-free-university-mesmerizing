@@ -1,0 +1,77 @@
+/* Section rail: icon, label, and one description line. The rail scrolls.
+   The page itself does not grow sideways. */
+.canon-banner {
+  max-height: none !important;
+  height: auto !important;
+  min-height: 78px;
+  overflow: hidden !important;
+  align-items: center;
+}
+.section-rail,
+body.home-world .section-rail {
+  max-height: none !important;
+  height: auto !important;
+  min-height: 62px !important;
+  align-items: stretch;
+}
+.section-chip {
+  align-items: center;
+  min-height: 58px;
+  height: auto;
+  padding: 6px 12px 6px 8px;
+  line-height: 1.15;
+}
+.section-chip .chip-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1px;
+  min-width: 0;
+}
+.section-chip .chip-name {
+  font-weight: 800;
+  font-size: 0.86rem;
+}
+.section-chip .chip-desc {
+  display: block;
+  max-width: 16rem;
+  font-size: 0.68rem;
+  font-weight: 650;
+  line-height: 1.2;
+  white-space: nowrap;
+  opacity: 0.9;
+}
+.section-chip .chip-ico {
+  transform: perspective(80px) rotateX(12deg) rotateY(-8deg);
+}
+.hero-stage { position: relative; min-height: 180px; }
+.hero-stage .hero-3d {
+  position: absolute;
+  right: 6px;
+  top: 6px;
+  width: 120px;
+  height: 120px;
+  transform: scale(0.48);
+  transform-origin: top right;
+  z-index: 2;
+}
+@media (max-width: 800px) {
+  .hero-stage .hero-3d { display: none; }
+  .canon-banner { min-height: 72px; }
+  .section-chip .chip-desc { max-width: 11rem; }
+}
+.mini-chart { margin: 8px 0 18px; }
+.five ul { line-height: 1.45; }
+.track-tile .tile-ico {
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  border-radius: 10px;
+  margin-bottom: 6px;
+  background: linear-gradient(145deg, #fff, #67e8f9);
+  color: #082f49;
+  box-shadow: 0 8px 0 rgba(8, 47, 73, 0.18), 0 0 12px rgba(34, 211, 238, 0.7);
+  transform: perspective(90px) rotateX(14deg);
+}
+.track-tile .tile-ico svg { width: 20px; height: 20px; }

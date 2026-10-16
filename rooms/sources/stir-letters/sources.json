@@ -1,0 +1,25 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "STIR/SHAKEN",
+      "url": "https://en.wikipedia.org/wiki/STIR/SHAKEN"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Caller ID",
+      "url": "https://en.wikipedia.org/wiki/Caller_ID"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 8224, authenticated identity management in SIP",
+      "url": "https://www.rfc-editor.org/rfc/rfc8224"
+    },
+    {
+      "kind": "Confirm",
+      "title": "A country's legal penalty for a failed attestation. confirm. Enforcement pages were not opened as statutes.",
+      "url": null
+    }
+  ]
+}

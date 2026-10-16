@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Emergency Services",
+      "url": "https://dev.bandwidth.com/docs/emergency/"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth home",
+      "url": "https://www.bandwidth.com/"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Voice",
+      "url": "https://dev.bandwidth.com/docs/voice/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Enhanced 911",
+      "url": "https://en.wikipedia.org/wiki/Enhanced_911"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Dynamic Location Routing behavior. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "A legal opinion on who must provide E911. confirm. These are study notes.",
+      "url": null
+    }
+  ]
+}

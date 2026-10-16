@@ -1,0 +1,508 @@
+{
+  "pages": [
+    {
+      "title": "Home",
+      "href": "index.html",
+      "blurb": "Twelve tracks. Start here if you are new.",
+      "keys": [
+        "home"
+      ]
+    },
+    {
+      "title": "Learn",
+      "href": "start.html",
+      "blurb": "Ten minutes, or the full course.",
+      "keys": [
+        "learn"
+      ]
+    },
+    {
+      "title": "Diagrams",
+      "href": "diagrams.html",
+      "blurb": "Still drawings you can export.",
+      "keys": [
+        "diagrams"
+      ]
+    },
+    {
+      "title": "Flows",
+      "href": "flows.html",
+      "blurb": "Ladders with a moving packet.",
+      "keys": [
+        "flows"
+      ]
+    },
+    {
+      "title": "Play",
+      "href": "play.html",
+      "blurb": "A short drill in this browser.",
+      "keys": [
+        "play"
+      ]
+    },
+    {
+      "title": "Listen",
+      "href": "listen.html",
+      "blurb": "Read-along notes for the guide.",
+      "keys": [
+        "listen"
+      ]
+    },
+    {
+      "title": "Downloads",
+      "href": "downloads.html",
+      "blurb": "Sheets, cards, and one zip.",
+      "keys": [
+        "downloads"
+      ]
+    },
+    {
+      "title": "Ecosystem",
+      "href": "ecosystem.html",
+      "blurb": "Glossary, bridges, and sister labs.",
+      "keys": [
+        "ecosystem"
+      ]
+    },
+    {
+      "title": "Help",
+      "href": "help.html",
+      "blurb": "How the menu, course, and bot work.",
+      "keys": [
+        "help"
+      ]
+    },
+    {
+      "title": "What CPaaS names",
+      "href": "tracks/T1.html",
+      "blurb": "The word, then the companies whose pages opened",
+      "keys": [
+        "what cpaas names",
+        "t1"
+      ]
+    },
+    {
+      "title": "SIP, WebRTC, RTP",
+      "href": "tracks/T2.html",
+      "blurb": "Signaling, the description, and the media",
+      "keys": [
+        "sip, webrtc, rtp",
+        "t2"
+      ]
+    },
+    {
+      "title": "Numbers and trunks",
+      "href": "tracks/T3.html",
+      "blurb": "E.164, DID, and the private and public domains",
+      "keys": [
+        "numbers and trunks",
+        "t3"
+      ]
+    },
+    {
+      "title": "SMS, MMS, 10DLC",
+      "href": "tracks/T4.html",
+      "blurb": "Text, media, and the registration names",
+      "keys": [
+        "sms, mms, 10dlc",
+        "t4"
+      ]
+    },
+    {
+      "title": "STIR and SHAKEN",
+      "href": "tracks/T5.html",
+      "blurb": "Identity, attestation, and the vendor pages",
+      "keys": [
+        "stir and shaken",
+        "t5"
+      ]
+    },
+    {
+      "title": "Emergency calling",
+      "href": "tracks/T6.html",
+      "blurb": "E911 words, and the duty pages that opened",
+      "keys": [
+        "emergency calling",
+        "t6"
+      ]
+    },
+    {
+      "title": "Programmable APIs",
+      "href": "tracks/T7.html",
+      "blurb": "Voice, video, messaging, and verify",
+      "keys": [
+        "programmable apis",
+        "t7"
+      ]
+    },
+    {
+      "title": "Webhooks and IVR",
+      "href": "tracks/T8.html",
+      "blurb": "Events inbound, and the verbs that gather",
+      "keys": [
+        "webhooks and ivr",
+        "t8"
+      ]
+    },
+    {
+      "title": "Contact center and AI",
+      "href": "tracks/T9.html",
+      "blurb": "IVR, ACD, and the agent pages",
+      "keys": [
+        "contact center and ai",
+        "t9"
+      ]
+    },
+    {
+      "title": "Observability and price",
+      "href": "tracks/T10.html",
+      "blurb": "Counts you can defend, and prices you confirm",
+      "keys": [
+        "observability and price",
+        "t10"
+      ]
+    },
+    {
+      "title": "Compliance and migration",
+      "href": "tracks/T11.html",
+      "blurb": "From a PBX toward a trunk, without a fake cutover",
+      "keys": [
+        "compliance and migration",
+        "t11"
+      ]
+    },
+    {
+      "title": "Open alternatives",
+      "href": "tracks/T12.html",
+      "blurb": "FreeSWITCH through Jami, then dates you confirm",
+      "keys": [
+        "open alternatives",
+        "t12"
+      ]
+    },
+    {
+      "title": "What the CPaaS section actually says",
+      "href": "rooms/cpaas-word.html",
+      "blurb": "T1-R01",
+      "keys": [
+        "cpaas-word",
+        "what the cpaas section actually says"
+      ]
+    },
+    {
+      "title": "Twilio and Vonage, from the articles",
+      "href": "rooms/twilio-vonage.html",
+      "blurb": "T1-R02",
+      "keys": [
+        "twilio-vonage",
+        "twilio and vonage, from the articles"
+      ]
+    },
+    {
+      "title": "Bandwidth, Sinch, Telnyx, Infobip, and Bird",
+      "href": "rooms/five-platforms.html",
+      "blurb": "T1-R03",
+      "keys": [
+        "five-platforms",
+        "bandwidth, sinch, telnyx, infobip, and bird"
+      ]
+    },
+    {
+      "title": "What SIP is for",
+      "href": "rooms/sip-jobs.html",
+      "blurb": "T2-R04",
+      "keys": [
+        "sip-jobs",
+        "what sip is for"
+      ]
+    },
+    {
+      "title": "Offer, answer, and SDP",
+      "href": "rooms/offer-answer.html",
+      "blurb": "T2-R05",
+      "keys": [
+        "offer-answer",
+        "offer, answer, and sdp"
+      ]
+    },
+    {
+      "title": "RTP, SRTP, and WebRTC",
+      "href": "rooms/rtp-webrtc.html",
+      "blurb": "T2-R06",
+      "keys": [
+        "rtp-webrtc",
+        "rtp, srtp, and webrtc"
+      ]
+    },
+    {
+      "title": "E.164 numbers and direct inward dial",
+      "href": "rooms/e164-did.html",
+      "blurb": "T3-R07",
+      "keys": [
+        "e164-did",
+        "e.164 numbers and direct inward dial"
+      ]
+    },
+    {
+      "title": "Two domains and a SIP trunk",
+      "href": "rooms/trunk-domains.html",
+      "blurb": "T3-R08",
+      "keys": [
+        "trunk-domains",
+        "two domains and a sip trunk"
+      ]
+    },
+    {
+      "title": "How a guide tells you to get a number",
+      "href": "rooms/number-habit.html",
+      "blurb": "T3-R09",
+      "keys": [
+        "number-habit",
+        "how a guide tells you to get a number"
+      ]
+    },
+    {
+      "title": "SMS, and the 160-character line",
+      "href": "rooms/sms-160.html",
+      "blurb": "T4-R10",
+      "keys": [
+        "sms-160",
+        "sms, and the 160-character line"
+      ]
+    },
+    {
+      "title": "MMS and the media a page will store",
+      "href": "rooms/mms-media.html",
+      "blurb": "T4-R11",
+      "keys": [
+        "mms-media",
+        "mms and the media a page will store"
+      ]
+    },
+    {
+      "title": "10DLC is a name on the compliance pages",
+      "href": "rooms/ten-dlc.html",
+      "blurb": "T4-R12",
+      "keys": [
+        "ten-dlc",
+        "10dlc is a name on the compliance pages"
+      ]
+    },
+    {
+      "title": "A, B, and C on the STIR article",
+      "href": "rooms/stir-letters.html",
+      "blurb": "T5-R13",
+      "keys": [
+        "stir-letters",
+        "a, b, and c on the stir article"
+      ]
+    },
+    {
+      "title": "SHAKEN, PASSporT, and the Identity header",
+      "href": "rooms/shaken-token.html",
+      "blurb": "T5-R14",
+      "keys": [
+        "shaken-token",
+        "shaken, passport, and the identity header"
+      ]
+    },
+    {
+      "title": "Where the vendors put the same words",
+      "href": "rooms/vendor-attest.html",
+      "blurb": "T5-R15",
+      "keys": [
+        "vendor-attest",
+        "where the vendors put the same words"
+      ]
+    },
+    {
+      "title": "E911, the PSAP, and NG911",
+      "href": "rooms/e911-words.html",
+      "blurb": "T6-R16",
+      "keys": [
+        "e911-words",
+        "e911, the psap, and ng911"
+      ]
+    },
+    {
+      "title": "Twilio's emergency calling page",
+      "href": "rooms/twilio-emergency.html",
+      "blurb": "T6-R17",
+      "keys": [
+        "twilio-emergency",
+        "twilio's emergency calling page"
+      ]
+    },
+    {
+      "title": "Bandwidth's two emergency hosts",
+      "href": "rooms/bandwidth-911.html",
+      "blurb": "T6-R18",
+      "keys": [
+        "bandwidth-911",
+        "bandwidth's two emergency hosts"
+      ]
+    },
+    {
+      "title": "Voice and video names that opened",
+      "href": "rooms/voice-video.html",
+      "blurb": "T7-R19",
+      "keys": [
+        "voice-video",
+        "voice and video names that opened"
+      ]
+    },
+    {
+      "title": "Messaging and verify",
+      "href": "rooms/message-verify.html",
+      "blurb": "T7-R20",
+      "keys": [
+        "message-verify",
+        "messaging and verify"
+      ]
+    },
+    {
+      "title": "One Plivo number that really was on the page",
+      "href": "rooms/plivo-commitment.html",
+      "blurb": "T7-R21",
+      "keys": [
+        "plivo-commitment",
+        "one plivo number that really was on the page"
+      ]
+    },
+    {
+      "title": "Webhooks come inbound",
+      "href": "rooms/webhook-direction.html",
+      "blurb": "T8-R22",
+      "keys": [
+        "webhook-direction",
+        "webhooks come inbound"
+      ]
+    },
+    {
+      "title": "TwiML verbs and what an IVR is",
+      "href": "rooms/twiml-ivr.html",
+      "blurb": "T8-R23",
+      "keys": [
+        "twiml-ivr",
+        "twiml verbs and what an ivr is"
+      ]
+    },
+    {
+      "title": "A ladder you are allowed to draw",
+      "href": "rooms/call-flow.html",
+      "blurb": "T8-R24",
+      "keys": [
+        "call-flow",
+        "a ladder you are allowed to draw"
+      ]
+    },
+    {
+      "title": "Contact center words that stay general",
+      "href": "rooms/ivr-acd.html",
+      "blurb": "T9-R25",
+      "keys": [
+        "ivr-acd",
+        "contact center words that stay general"
+      ]
+    },
+    {
+      "title": "AI voice agents, only the sentences that opened",
+      "href": "rooms/ai-agents.html",
+      "blurb": "T9-R26",
+      "keys": [
+        "ai-agents",
+        "ai voice agents, only the sentences that opened"
+      ]
+    },
+    {
+      "title": "Bridges the open pages actually name",
+      "href": "rooms/open-bridges.html",
+      "blurb": "T9-R27",
+      "keys": [
+        "open-bridges",
+        "bridges the open pages actually name"
+      ]
+    },
+    {
+      "title": "Numbers you may repeat",
+      "href": "rooms/counts-only.html",
+      "blurb": "T10-R28",
+      "keys": [
+        "counts-only",
+        "numbers you may repeat"
+      ]
+    },
+    {
+      "title": "What observability meant on the pages",
+      "href": "rooms/observability.html",
+      "blurb": "T10-R29",
+      "keys": [
+        "observability",
+        "what observability meant on the pages"
+      ]
+    },
+    {
+      "title": "Prices that stay confirm",
+      "href": "rooms/price-confirm.html",
+      "blurb": "T10-R30",
+      "keys": [
+        "price-confirm",
+        "prices that stay confirm"
+      ]
+    },
+    {
+      "title": "Compliance starts by not pasting a secret",
+      "href": "rooms/no-secrets.html",
+      "blurb": "T11-R31",
+      "keys": [
+        "no-secrets",
+        "compliance starts by not pasting a secret"
+      ]
+    },
+    {
+      "title": "Leaving a PBX without inventing a cutover",
+      "href": "rooms/from-pbx.html",
+      "blurb": "T11-R32",
+      "keys": [
+        "from-pbx",
+        "leaving a pbx without inventing a cutover"
+      ]
+    },
+    {
+      "title": "Avaya, UCCE, and the pages that did not open",
+      "href": "rooms/legacy-names.html",
+      "blurb": "T11-R33",
+      "keys": [
+        "legacy-names",
+        "avaya, ucce, and the pages that did not open"
+      ]
+    },
+    {
+      "title": "FreeSWITCH and Asterisk",
+      "href": "rooms/freeswitch-asterisk.html",
+      "blurb": "T12-R34",
+      "keys": [
+        "freeswitch-asterisk",
+        "freeswitch and asterisk"
+      ]
+    },
+    {
+      "title": "Kamailio is a SIP server",
+      "href": "rooms/kamailio-proxy.html",
+      "blurb": "T12-R35",
+      "keys": [
+        "kamailio-proxy",
+        "kamailio is a sip server"
+      ]
+    },
+    {
+      "title": "LiveKit, Jitsi, Matrix, and Jami",
+      "href": "rooms/browser-and-mesh.html",
+      "blurb": "T12-R36",
+      "keys": [
+        "browser-and-mesh",
+        "livekit, jitsi, matrix, and jami"
+      ]
+    }
+  ]
+}

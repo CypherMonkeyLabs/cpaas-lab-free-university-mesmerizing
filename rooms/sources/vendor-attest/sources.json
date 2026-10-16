@@ -1,0 +1,40 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Twilio",
+      "title": "Trusted calling with SHAKEN/STIR",
+      "url": "https://www.twilio.com/docs/voice/trusted-calling-with-shakenstir"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Voice",
+      "url": "https://dev.bandwidth.com/docs/voice/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "STIR/SHAKEN",
+      "url": "https://en.wikipedia.org/wiki/STIR/SHAKEN"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Caller ID",
+      "url": "https://en.wikipedia.org/wiki/Caller_ID"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Twilio SHAKEN onboarding steps and any signing fee. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Bandwidth STIR API parameters. confirm. The voice page named the APIs and did not list the fields.",
+      "url": null
+    }
+  ]
+}

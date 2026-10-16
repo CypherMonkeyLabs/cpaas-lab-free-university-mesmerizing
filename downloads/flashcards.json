@@ -1,0 +1,359 @@
+{
+  "cards": [
+    {
+      "front": "CPaaS",
+      "back": "The communications platform as a service described in the Platform as a service article: a cloud platform for voice, video, and messaging inside an application.",
+      "source": "rooms/cpaas-word.html"
+    },
+    {
+      "front": "PaaS",
+      "back": "The broader platform model on the same article. CPaaS is a section inside it, not a second encyclopedia entry that opened on its own.",
+      "source": "rooms/cpaas-word.html"
+    },
+    {
+      "front": "Twilio Voice",
+      "back": "The API the Twilio article says launched on 20 November 2008 for making and receiving phone calls hosted in the cloud.",
+      "source": "rooms/twilio-vonage.html"
+    },
+    {
+      "front": "Vonage communications APIs",
+      "back": "One of the three offering groups the Vonage article lists, beside unified communications and contact center applications.",
+      "source": "rooms/twilio-vonage.html"
+    },
+    {
+      "front": "Bandwidth Universal Platform",
+      "back": "The product heading on the Bandwidth home page that opened, beside APIs for voice, messaging, emergency calling, WebRTC, and authentication.",
+      "source": "rooms/five-platforms.html"
+    },
+    {
+      "front": "Bird",
+      "back": "The docs site that opened and said email, SMS, and WhatsApp share one platform. MessageBird's developer site also opened. The encyclopedia title did not.",
+      "source": "rooms/five-platforms.html"
+    },
+    {
+      "front": "SIP",
+      "back": "The signaling protocol Wikipedia describes for starting, keeping, changing, and ending multimedia sessions.",
+      "source": "rooms/sip-jobs.html"
+    },
+    {
+      "front": "SIP header field",
+      "back": "A name in the IANA registry. The page says the names are case-insensitive.",
+      "source": "rooms/sip-jobs.html"
+    },
+    {
+      "front": "Offer/answer",
+      "back": "The model in RFC 3264 for using SDP to agree on a session.",
+      "source": "rooms/offer-answer.html"
+    },
+    {
+      "front": "tel URI",
+      "back": "The URI RFC 3966 specifies for telephone numbers.",
+      "source": "rooms/offer-answer.html"
+    },
+    {
+      "front": "RTP",
+      "back": "The media transport Wikipedia describes for audio and video, usually over UDP, specified in the RFC 3550 lineage.",
+      "source": "rooms/rtp-webrtc.html"
+    },
+    {
+      "front": "WebRTC",
+      "back": "The browser real-time project Wikipedia describes. RFC 8825 is the IETF overview of the protocol suite, not a single protocol.",
+      "source": "rooms/rtp-webrtc.html"
+    },
+    {
+      "front": "E.164",
+      "back": "The ITU-T international public telecommunication numbering plan. The Wikipedia summary says conforming numbers are digits only, at most fifteen.",
+      "source": "rooms/e164-did.html"
+    },
+    {
+      "front": "DID",
+      "back": "Direct inward dialing. The article also says DDI is the name used in Europe and Oceania.",
+      "source": "rooms/e164-did.html"
+    },
+    {
+      "front": "Private domain",
+      "back": "The SIP trunking article's name for the part of the network connected to a PBX or unified communications server.",
+      "source": "rooms/trunk-domains.html"
+    },
+    {
+      "front": "SIP connection",
+      "back": "The Telnyx object for inbound traffic and authentication. Outbound voice profiles are the other object, for outbound routing.",
+      "source": "rooms/trunk-domains.html"
+    },
+    {
+      "front": "Messaging profile",
+      "back": "The Telnyx object the guide says to create and assign to a number before the send call.",
+      "source": "rooms/number-habit.html"
+    },
+    {
+      "front": "Bearer token",
+      "back": "The Authorization scheme in the Telnyx sample. The key itself stays out of this repository.",
+      "source": "rooms/number-habit.html"
+    },
+    {
+      "front": "SMSC",
+      "back": "The short message service center the SMS article says a gateway uses to carry messages over the Internet.",
+      "source": "rooms/sms-160.html"
+    },
+    {
+      "front": "Conversation API",
+      "back": "The Sinch API the overview describes as channel-agnostic across SMS and the other channels it lists.",
+      "source": "rooms/sms-160.html"
+    },
+    {
+      "front": "MMS",
+      "back": "The multimedia message Wikipedia describes as an extension of SMS.",
+      "source": "rooms/mms-media.html"
+    },
+    {
+      "front": "segmentCount",
+      "back": "The field Bandwidth says it returns. For MMS the guide says the value is always 1.",
+      "source": "rooms/mms-media.html"
+    },
+    {
+      "front": "A2P 10DLC",
+      "back": "The name on Twilio's compliance title and on Sinch's brand and campaign API. The expansion and the tariff were not read.",
+      "source": "rooms/ten-dlc.html"
+    },
+    {
+      "front": "Common short code",
+      "back": "The short-code article's name for a U.S. inter-operator short number. It is not the same object as a 10DLC campaign.",
+      "source": "rooms/ten-dlc.html"
+    },
+    {
+      "front": "Full Attestation",
+      "back": "The STIR article's A level: the provider recognizes the entire calling number as the subscriber's.",
+      "source": "rooms/stir-letters.html"
+    },
+    {
+      "front": "CNAM",
+      "back": "Calling Name Presentation, the name service the Caller ID article describes alongside the number.",
+      "source": "rooms/stir-letters.html"
+    },
+    {
+      "front": "SHAKEN",
+      "back": "Signature-based Handling of Asserted information using toKENs, the profile Wikipedia attributes to the SIP Forum and ATIS.",
+      "source": "rooms/shaken-token.html"
+    },
+    {
+      "front": "PASSporT",
+      "back": "The Personal Assertion Token defined in RFC 8225.",
+      "source": "rooms/shaken-token.html"
+    },
+    {
+      "front": "Voice Integrity",
+      "back": "A Twilio voice-navigation label beside SHAKEN/STIR. This session did not open a separate definition page for it.",
+      "source": "rooms/vendor-attest.html"
+    },
+    {
+      "front": "Caller-name query",
+      "back": "The Bandwidth voice service for the calling name on VoIP calls in the US and Canada, distinct from the STIR/SHAKEN API sentence.",
+      "source": "rooms/vendor-attest.html"
+    },
+    {
+      "front": "PSAP",
+      "back": "Public safety answering point. The call center the E911 and PSAP articles describe.",
+      "source": "rooms/e911-words.html"
+    },
+    {
+      "front": "NG911",
+      "back": "The initiative the Next Generation 911 article describes for text, images, video, and location, intended to replace E911 infrastructure over time.",
+      "source": "rooms/e911-words.html"
+    },
+    {
+      "front": "Emergency address",
+      "back": "The address Twilio's page says to associate with the phone number used for the emergency call.",
+      "source": "rooms/twilio-emergency.html"
+    },
+    {
+      "front": "Basic 911",
+      "back": "Twilio's term, on that page, for routing to the PSAP without automatically delivering the number and address.",
+      "source": "rooms/twilio-emergency.html"
+    },
+    {
+      "front": "911 Access Dashboard",
+      "back": "The Bandwidth emergency host whose base URL begins with service.dashcs.com on the guide.",
+      "source": "rooms/bandwidth-911.html"
+    },
+    {
+      "front": "DLR",
+      "back": "Dynamic Location Routing, a label on the Bandwidth home page. The behavior was not opened.",
+      "source": "rooms/bandwidth-911.html"
+    },
+    {
+      "front": "Video Room",
+      "back": "A concept heading on the Twilio Video docs that opened.",
+      "source": "rooms/voice-video.html"
+    },
+    {
+      "front": "Text to speech",
+      "back": "The Vonage Voice page's feature, described there as over 50+ languages.",
+      "source": "rooms/voice-video.html"
+    },
+    {
+      "front": "Verify",
+      "back": "The two-factor product Vonage describes, and the separate Twilio docs set. Not a synonym for the messaging API.",
+      "source": "rooms/message-verify.html"
+    },
+    {
+      "front": "Silent Authentication",
+      "back": "A Vonage Verify channel name. Twilio's navigation says Silent Network Auth. The names are similar and the pages are different.",
+      "source": "rooms/message-verify.html"
+    },
+    {
+      "front": "Minimum Monthly Commitment",
+      "back": "The Plivo WhatsApp access commitment stated on the prerequisites page, USD 1,000 per month in the US data region or \u20b91,00,000 per month in the India data region.",
+      "source": "rooms/plivo-commitment.html"
+    },
+    {
+      "front": "WABA",
+      "back": "WhatsApp Business Account. The same page says you need one mapped to Plivo, created through an embedded signup or an existing Meta account.",
+      "source": "rooms/plivo-commitment.html"
+    },
+    {
+      "front": "Webhook",
+      "back": "Twilio's name for the HTTP request it sends your app when an event occurs.",
+      "source": "rooms/webhook-direction.html"
+    },
+    {
+      "front": "HTTP 202",
+      "back": "The status Bandwidth says it returns when a message has been queued, not when it has been delivered.",
+      "source": "rooms/webhook-direction.html"
+    },
+    {
+      "front": "TwiML",
+      "back": "Twilio's markup for Programmable Voice. The page that opened lists the verbs and nouns above.",
+      "source": "rooms/twiml-ivr.html"
+    },
+    {
+      "front": "ACD",
+      "back": "Automatic call distributor. The IVR article says routing can be optimized when IVR is combined with an attendant and an ACD.",
+      "source": "rooms/twiml-ivr.html"
+    },
+    {
+      "front": "Media Streams",
+      "back": "The Twilio voice feature named for sending live audio to a WebSocket. The message schema was not opened.",
+      "source": "rooms/call-flow.html"
+    },
+    {
+      "front": "Refer",
+      "back": "A TwiML verb on the voice page. Not, by itself, a full transfer tutorial.",
+      "source": "rooms/call-flow.html"
+    },
+    {
+      "front": "Automated attendant",
+      "back": "The menu function the IVR article lists beside IVR and ACD.",
+      "source": "rooms/ivr-acd.html"
+    },
+    {
+      "front": "TaskRouter",
+      "back": "A Twilio docs-home product name. Schema confirm.",
+      "source": "rooms/ivr-acd.html"
+    },
+    {
+      "front": "SIP participant",
+      "back": "LiveKit's term for a participant that represents a phone caller or callee.",
+      "source": "rooms/ai-agents.html"
+    },
+    {
+      "front": "Dispatch rule",
+      "back": "A LiveKit telephony object, with trunks, that controls how calls are handled. The rule syntax was not copied.",
+      "source": "rooms/ai-agents.html"
+    },
+    {
+      "front": "SIP-WebRTC gateway",
+      "back": "A feature the Kamailio article lists. Not a configured server in this repository.",
+      "source": "rooms/open-bridges.html"
+    },
+    {
+      "front": "Operator Connect",
+      "back": "A Microsoft Teams integration name on the Bandwidth home page, beside Direct Routing.",
+      "source": "rooms/open-bridges.html"
+    },
+    {
+      "front": "Figure",
+      "back": "A number this lab repeats only when the opened page states it.",
+      "source": "rooms/counts-only.html"
+    },
+    {
+      "front": "Registry date",
+      "back": "The Last Updated value on IANA's SIP parameters page. Not a product release.",
+      "source": "rooms/counts-only.html"
+    },
+    {
+      "front": "Voice Insights",
+      "back": "A Twilio voice-navigation name for call and conference summaries. Thresholds were not opened.",
+      "source": "rooms/observability.html"
+    },
+    {
+      "front": "Message metadata",
+      "back": "What Bandwidth says it keeps. Not the message body.",
+      "source": "rooms/observability.html"
+    },
+    {
+      "front": "Confirm",
+      "back": "A claim with no URL in this lab, because the page was not opened or did not contain the figure.",
+      "source": "rooms/price-confirm.html"
+    },
+    {
+      "front": "See pricing",
+      "back": "The pointer on the Vonage pages. The destination table was not opened.",
+      "source": "rooms/price-confirm.html"
+    },
+    {
+      "front": "Shared key",
+      "back": "What Twilio's webhook docs say you can use to sign webhooks. The key itself is not published here.",
+      "source": "rooms/no-secrets.html"
+    },
+    {
+      "front": "Record",
+      "back": "A TwiML verb, and also a Jami feature. Neither is a legal permission.",
+      "source": "rooms/no-secrets.html"
+    },
+    {
+      "front": "extensions.conf",
+      "back": "The Asterisk dialplan file named on the documentation page.",
+      "source": "rooms/from-pbx.html"
+    },
+    {
+      "front": "Dual run",
+      "back": "A migration idea this lab will not schedule. The week count is confirm.",
+      "source": "rooms/from-pbx.html"
+    },
+    {
+      "front": "UC lab",
+      "back": "The sibling course that did open, for the Cisco-shaped material.",
+      "source": "rooms/legacy-names.html"
+    },
+    {
+      "front": "SIP profile",
+      "back": "A FreeSWITCH configuration topic the manual's introduction says it covers.",
+      "source": "rooms/freeswitch-asterisk.html"
+    },
+    {
+      "front": "AGI",
+      "back": "Asterisk Gateway Interface. The article says AGI programs can use standard streams or TCP sockets.",
+      "source": "rooms/freeswitch-asterisk.html"
+    },
+    {
+      "front": "Redirect server",
+      "back": "One of the three SIP roles the Kamailio article lists.",
+      "source": "rooms/kamailio-proxy.html"
+    },
+    {
+      "front": "OpenSIPS",
+      "back": "The article's fork of the older SER line. It is named so you do not mix the projects. Its current docs were not opened.",
+      "source": "rooms/kamailio-proxy.html"
+    },
+    {
+      "front": "Jitsi Videobridge",
+      "back": "The selective-forwarding component the Jitsi article names for multi-party video.",
+      "source": "rooms/browser-and-mesh.html"
+    },
+    {
+      "front": "Matrix",
+      "back": "The open federated protocol whose specification introduction was opened. Bridges are named there as a use, not as a list of vendor connectors.",
+      "source": "rooms/browser-and-mesh.html"
+    }
+  ]
+}

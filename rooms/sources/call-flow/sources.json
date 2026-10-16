@@ -1,0 +1,45 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "RFC",
+      "title": "RFC 3261, SIP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3261"
+    },
+    {
+      "kind": "RFC",
+      "title": "RFC 3550, RTP",
+      "url": "https://www.rfc-editor.org/rfc/rfc3550"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Introduction to Webhooks",
+      "url": "https://www.twilio.com/docs/usage/webhooks"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "SIP trunking",
+      "url": "https://en.wikipedia.org/wiki/SIP_trunking"
+    },
+    {
+      "kind": "Confirm",
+      "title": "A captured transfer ladder. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Twilio Media Streams message fields. confirm.",
+      "url": null
+    }
+  ]
+}

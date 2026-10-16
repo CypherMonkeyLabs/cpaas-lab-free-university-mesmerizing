@@ -1,0 +1,50 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Twilio",
+      "title": "Introduction to Webhooks",
+      "url": "https://www.twilio.com/docs/usage/webhooks"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Security",
+      "url": "https://www.twilio.com/docs/usage/security"
+    },
+    {
+      "kind": "Telnyx",
+      "title": "Send your first Telnyx message",
+      "url": "https://developers.telnyx.com/docs/messaging/messages/send-message"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Twilio",
+      "url": "https://en.wikipedia.org/wiki/Twilio"
+    },
+    {
+      "kind": "Twilio",
+      "title": "TwiML for Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice/twiml"
+    },
+    {
+      "kind": "Jami",
+      "title": "Jami",
+      "url": "https://jami.net/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "ISO, SOC, HIPAA, or PCI certificate identifiers. confirm. Not read.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Call-recording statutes. confirm. Not legal advice.",
+      "url": null
+    }
+  ]
+}

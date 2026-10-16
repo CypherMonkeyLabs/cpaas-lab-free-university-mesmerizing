@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Twilio",
+      "title": "Programmable Messaging and A2P 10DLC",
+      "url": "https://www.twilio.com/docs/messaging/compliance/a2p-10dlc"
+    },
+    {
+      "kind": "Sinch",
+      "title": "Sinch SMS overview",
+      "url": "https://developers.sinch.com/docs/sms/overview"
+    },
+    {
+      "kind": "Sinch",
+      "title": "Sinch developer documentation",
+      "url": "https://developers.sinch.com/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Short code",
+      "url": "https://en.wikipedia.org/wiki/Short_code"
+    },
+    {
+      "kind": "Telnyx",
+      "title": "Send your first Telnyx message",
+      "url": "https://developers.telnyx.com/docs/messaging/messages/send-message"
+    },
+    {
+      "kind": "Confirm",
+      "title": "The expansion of 10DLC, throughput limits, and registration fees. confirm. Not read as prose on the pages that opened.",
+      "url": null
+    }
+  ]
+}

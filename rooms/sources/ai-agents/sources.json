@@ -1,0 +1,50 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "LiveKit",
+      "title": "LiveKit Agents introduction",
+      "url": "https://docs.livekit.io/agents/"
+    },
+    {
+      "kind": "LiveKit",
+      "title": "LiveKit telephony introduction",
+      "url": "https://docs.livekit.io/telephony/"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage Voice API",
+      "url": "https://developer.vonage.com/en/voice/voice-api/overview"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice"
+    },
+    {
+      "kind": "Telnyx",
+      "title": "Telnyx developer docs",
+      "url": "https://developers.telnyx.com/docs/overview"
+    },
+    {
+      "kind": "Plivo",
+      "title": "Plivo docs home",
+      "url": "https://www.plivo.com/docs/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Conversation Relay WebSocket schema. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Telnyx agent prices and the Beta LiveKit setup steps. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "A G.114 delay figure. confirm. That recommendation was not opened.",
+      "url": null
+    }
+  ]
+}

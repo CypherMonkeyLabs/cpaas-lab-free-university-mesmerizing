@@ -1,0 +1,45 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "E.164",
+      "url": "https://en.wikipedia.org/wiki/E.164"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "SMS",
+      "url": "https://en.wikipedia.org/wiki/Short_Message_Service"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Plivo",
+      "title": "Plivo WhatsApp prerequisites",
+      "url": "https://www.plivo.com/docs/messaging/concepts/whatsapp/prerequisites"
+    },
+    {
+      "kind": "IANA",
+      "title": "IANA SIP parameters",
+      "url": "https://www.iana.org/assignments/sip-parameters/sip-parameters.xhtml"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage Voice API",
+      "url": "https://developer.vonage.com/en/voice/voice-api/overview"
+    },
+    {
+      "kind": "Confirm",
+      "title": "A MOS or G.114 millisecond budget. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Any vendor price not in the list above. confirm.",
+      "url": null
+    }
+  ]
+}

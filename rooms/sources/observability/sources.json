@@ -1,0 +1,35 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "LiveKit",
+      "title": "LiveKit Agents introduction",
+      "url": "https://docs.livekit.io/agents/"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Programmable Voice",
+      "url": "https://www.twilio.com/docs/voice"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Introduction to Webhooks",
+      "url": "https://www.twilio.com/docs/usage/webhooks"
+    },
+    {
+      "kind": "Bandwidth",
+      "title": "Bandwidth Messaging API",
+      "url": "https://dev.bandwidth.com/docs/messaging/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Voice Insights metric definitions. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "A jitter or MOS threshold. confirm.",
+      "url": null
+    }
+  ]
+}

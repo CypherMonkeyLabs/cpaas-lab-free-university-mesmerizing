@@ -1,0 +1,40 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Wikipedia",
+      "title": "FreeSWITCH",
+      "url": "https://en.wikipedia.org/wiki/FreeSWITCH"
+    },
+    {
+      "kind": "FreeSWITCH",
+      "title": "FreeSWITCH users manual",
+      "url": "https://developer.signalwire.com/freeswitch/"
+    },
+    {
+      "kind": "Wikipedia",
+      "title": "Asterisk (software)",
+      "url": "https://en.wikipedia.org/wiki/Asterisk_(PBX)"
+    },
+    {
+      "kind": "Asterisk",
+      "title": "Asterisk documentation overview",
+      "url": "https://docs.asterisk.org/About-the-Project/"
+    },
+    {
+      "kind": "Asterisk",
+      "title": "Asterisk dialplan",
+      "url": "https://docs.asterisk.org/Configuration/Dialplan/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "A current FreeSWITCH tarball newer than the article's 1.10 sentence. confirm before you install.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "SignalWire prices. confirm.",
+      "url": null
+    }
+  ]
+}

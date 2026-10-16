@@ -1,0 +1,50 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Vonage",
+      "title": "Vonage Voice API",
+      "url": "https://developer.vonage.com/en/voice/voice-api/overview"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage Messages API",
+      "url": "https://developer.vonage.com/en/messages/overview"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage Verify API",
+      "url": "https://developer.vonage.com/en/verify/overview"
+    },
+    {
+      "kind": "Telnyx",
+      "title": "Telnyx SIP trunking overview",
+      "url": "https://developers.telnyx.com/docs/voice/sip-trunking/get-started"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Twilio docs home",
+      "url": "https://www.twilio.com/docs"
+    },
+    {
+      "kind": "Sinch",
+      "title": "Sinch SMS overview",
+      "url": "https://developers.sinch.com/docs/sms/overview"
+    },
+    {
+      "kind": "Plivo",
+      "title": "Plivo WhatsApp prerequisites",
+      "url": "https://www.plivo.com/docs/messaging/concepts/whatsapp/prerequisites"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Twilio, Vonage, Telnyx, Sinch, Bandwidth, Infobip, and Bird price tables. confirm.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Telnyx daily spend amount. confirm.",
+      "url": null
+    }
+  ]
+}

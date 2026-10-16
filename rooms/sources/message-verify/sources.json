@@ -1,0 +1,40 @@
+{
+  "opened": "2026-10",
+  "sources": [
+    {
+      "kind": "Vonage",
+      "title": "Vonage Messages API",
+      "url": "https://developer.vonage.com/en/messages/overview"
+    },
+    {
+      "kind": "Vonage",
+      "title": "Vonage Verify API",
+      "url": "https://developer.vonage.com/en/verify/overview"
+    },
+    {
+      "kind": "Twilio",
+      "title": "Verify",
+      "url": "https://www.twilio.com/docs/verify"
+    },
+    {
+      "kind": "Infobip",
+      "title": "Infobip documentation hub",
+      "url": "https://www.infobip.com/docs"
+    },
+    {
+      "kind": "MessageBird",
+      "title": "MessageBird developers",
+      "url": "https://developers.messagebird.com/"
+    },
+    {
+      "kind": "Confirm",
+      "title": "Verify price per channel. confirm. Vonage says see pricing. The table was not opened.",
+      "url": null
+    },
+    {
+      "kind": "Confirm",
+      "title": "Infobip roadmap dates. confirm. The nav label opened. The dates did not.",
+      "url": null
+    }
+  ]
+}
