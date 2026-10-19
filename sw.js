@@ -1,6 +1,6 @@
 /* Scope is the directory that contains this file.
    Pages register it with { scope: "./" } resolved from the lab root. */
-const CACHE_NAME = "cpaas-lab-v3";
+const CACHE_NAME = "cpaas-lab-v4";
 const CACHE_BUDGET_NOTE = "Precache stays under 3.5 MB: shell, chat, one lesson, icons.";
 const SHELL_ASSETS = [
   "./",
@@ -23,6 +23,8 @@ const SHELL_ASSETS = [
   "./assets/js/frame.js",
   "./assets/js/university.js",
   "./assets/js/pwa.js",
+  "./assets/js/theme-boot.js",
+  "./assets/js/play.js",
   "./assets/css/studio.css",
   "./assets/icon-192.png",
   "./assets/icon-512.png",

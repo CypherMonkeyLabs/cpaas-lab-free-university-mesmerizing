@@ -9,6 +9,12 @@ from facts import ROOMS, SOURCES, TRACKS
 
 ROOT = Path(__file__).resolve().parents[1]
 BRAND = "https://cyphermonkeylabs.com"
+CSP = (
+    '<meta http-equiv="Content-Security-Policy" content="default-src \'self\'; '
+    "script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; "
+    "media-src 'self' blob: data:; font-src 'self' data:; connect-src 'self'; "
+    "worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'\">"
+)
 REPO = "https://github.com/CypherMonkeyLabs"
 TREE = "https://linktr.ee/cypherMonkey"
 
@@ -156,12 +162,13 @@ def chrome_open(title, desc, depth, current):
 <html lang="en">
 <head>
 <meta charset="utf-8">
+{CSP}
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{e(title)} · CPaaS Lab</title>
 <meta name="description" content="{e(desc)}">
 <link rel="icon" href="{p}favicon.svg" type="image/svg+xml">
 <link rel="manifest" href="{p}manifest.webmanifest">
-<script>try{{var t=localStorage.getItem("canon-theme");if(t!=="aurora")t="bloom";document.documentElement.dataset.theme=t;var f=localStorage.getItem("canon-font");if(f==="sm"||f==="lg")document.documentElement.dataset.font=f;var ink=localStorage.getItem("canon-ink");if(ink&&/^#[0-9a-f]{{6}}$/i.test(ink))document.documentElement.style.setProperty("--ink",ink);}}catch(err){{document.documentElement.dataset.theme="bloom";}}</script>
+<script src="{p}assets/js/theme-boot.js"></script>
 <link rel="stylesheet" href="{p}assets/css/canon.css"><link rel="stylesheet" href="{p}assets/css/shell.css"><link rel="stylesheet" href="{p}assets/css/wow.css"><link rel="stylesheet" href="{p}assets/css/frame.css"><link rel="stylesheet" href="{p}assets/css/polish.css"><link rel="stylesheet" href="{p}assets/css/footer.css"><link rel="stylesheet" href="{p}assets/css/university.css"><link rel="stylesheet" href="{p}assets/css/uc.css"><link rel="stylesheet" href="{p}assets/css/cpaas.css">
 <link rel="stylesheet" href="{p}guide/guide.css">
 </head>
@@ -380,7 +387,9 @@ def build_rooms():
         md += ["", room["example"], ""]
         write(f"downloads/rooms/{slug}.md", "\n".join(md) + "\n")
         sheet = (
-            "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>"
+            "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\">"
+            + CSP
+            + "<title>"
             + e(room["title"])
             + "</title><link rel=\"stylesheet\" href=\"../../assets/css/footer.css\">"
             + "<style>body{font-family:system-ui,sans-serif;margin:24px;background:#f8fafc;color:#0f172a}ul{font-size:1.05rem;line-height:1.5}</style></head><body>"
@@ -537,41 +546,37 @@ def build_hubs():
 <section><h2>What correct means</h2>
 <p>The drill asks for SIP session setup, then SDP offer and answer, then RTP. RFC 3261 and the SIP article set up the session. RFC 3264 and RFC 8866 describe it. RFC 3550 carries it. A price is not a call-flow step, so it stays off this list.</p>
 </section>
-<script>
-(function(){
-  var jobs=["RTP media","SDP offer and answer","SIP session setup","A price stays confirm"];
-  var want=["SIP session setup","SDP offer and answer","RTP media","A price stays confirm"];
-  var list=document.getElementById("order");
-  jobs.forEach(function(job,i){
-    var li=document.createElement("li");
-    li.textContent=job;
-    li.draggable=true;
-    li.dataset.job=job;
-    li.style.padding="8px";
-    li.style.margin="6px 0";
-    li.style.border="2px solid #0f766e";
-    li.style.borderRadius="12px";
-    li.addEventListener("dragstart",function(){li.classList.add("dragging");});
-    li.addEventListener("dragend",function(){li.classList.remove("dragging");});
-    list.appendChild(li);
-  });
-  list.addEventListener("dragover",function(ev){
-    ev.preventDefault();
-    var dragging=list.querySelector(".dragging");
-    var after=[].slice.call(list.children).find(function(child){
-      var box=child.getBoundingClientRect();
-      return ev.clientY < box.top + box.height/2;
-    });
-    if(!dragging) return;
-    if(after) list.insertBefore(dragging, after); else list.appendChild(dragging);
-  });
-  document.getElementById("check-order").addEventListener("click",function(){
-    var got=[].map.call(list.children,function(li){return li.dataset.job;});
-    var ok=got.every(function(item,i){return item===want[i];});
-    document.getElementById("play-note").textContent=ok?"That order matches the study habit.":"Not yet. SIP session setup, then SDP, then RTP. A price is a different object.";
-  });
-})();
-</script>
+<section id="call-sim" class="call-sim" aria-labelledby="sim-title">
+<h2 id="sim-title">Call-flow simulator</h2>
+<p class="sim-flag">Simulation. This page does not call Twilio, Vonage, Bandwidth, or any other vendor. Nothing here is sent to a network. The ladder is a teaching sketch, not a packet capture.</p>
+<div class="sim-nodes" role="group" aria-label="Signaling steps">
+<button type="button" data-sim-node="INVITE" aria-pressed="true">INVITE</button>
+<button type="button" data-sim-node="180">180 Ringing</button>
+<button type="button" data-sim-node="200">200 OK</button>
+<button type="button" data-sim-node="ACK">ACK</button>
+<button type="button" data-sim-node="BYE">BYE</button>
+</div>
+<form class="sim-form" id="sim-form">
+<label>Request URI <input id="sim-uri" name="uri" value="sip:1000;user=phone" autocomplete="off"></label>
+<label>DTMF digit <input id="sim-dtmf" name="dtmf" value="1" maxlength="4" autocomplete="off"></label>
+<label>IVR branch
+<select id="sim-branch" name="branch">
+<option value="queue">Queue</option>
+<option value="voicemail">Voicemail</option>
+<option value="hangup">Hang up</option>
+</select>
+</label>
+<button type="submit">Show the simulated result</button>
+</form>
+<pre id="sim-out" aria-live="polite">Pick a step, then show the simulated result.</pre>
+<div class="mini-quiz" data-quiz data-answer="rtp">
+<p>Study check: after the session is set up, which name carries the media?</p>
+<button type="button" class="choice" data-choice="sip">SIP</button>
+<button type="button" class="choice" data-choice="rtp">RTP</button>
+<p class="quiz-note" hidden>SIP sets up the session. RTP carries the media. This check stays in the browser.</p>
+</div>
+</section>
+<script src="assets/js/play.js"></script>
 </div>'''
     page("play.html", "Play", "A short drill in this browser.", 0, "play.html", play)
 
@@ -715,7 +720,9 @@ def build_hubs():
         f"<article><h2>{e(c['front'])}</h2><p>{e(c['back'])}</p><p>Source: {e(c['source'])}</p></article>" for c in cards
     )
     write("downloads/flashcards.html",
-          "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\"><title>Flashcards</title>"
+          "<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"utf-8\">"
+          + CSP
+          + "<title>Flashcards</title>"
           "<link rel=\"stylesheet\" href=\"../assets/css/footer.css\">"
           "<style>body{font-family:system-ui,sans-serif;margin:24px}article{border:1px solid #99f6e4;border-radius:12px;padding:12px;margin:8px 0}</style></head><body>"
           f"<h1>Flashcards</h1><p class=\"lede\">Terms from the lessons.</p>{card_html}"
@@ -745,38 +752,84 @@ def build_hubs():
             zf.write(ROOT / "downloads" / "rooms" / f"{room['slug']}.md", f"rooms/{room['slug']}.md")
         zf.writestr("README.txt", "Study notes. Not vendor documentation and not legal advice.\n")
 
-    write("sw.js", r'''/* Cache shell for the CPaaS study lab. */
-var CACHE = "cpaas-lab-r1";
-var SHELL = ["./index.html","./start.html","./assets/css/uc.css","./assets/js/frame.js","./guide/guide.js","./favicon.svg"];
-self.addEventListener("install", function (event) {
-  event.waitUntil(caches.open(CACHE).then(function (cache) { return cache.addAll(SHELL); }).then(function () { return self.skipWaiting(); }));
-});
-self.addEventListener("activate", function (event) {
-  event.waitUntil(caches.keys().then(function (keys) {
-    return Promise.all(keys.filter(function (key) { return key !== CACHE; }).map(function (key) { return caches.delete(key); }));
-  }).then(function () { return self.clients.claim(); }));
-});
-self.addEventListener("fetch", function (event) {
-  if (event.request.method !== "GET") return;
-  event.respondWith(caches.match(event.request).then(function (hit) { return hit || fetch(event.request); }));
-});
-''')
-    write("manifest.webmanifest", json.dumps({
-        "name": "CPaaS Lab",
-        "short_name": "CPaaS Lab",
-        "start_url": "./index.html",
-        "display": "standalone",
-        "background_color": "#f3f6ff",
-        "theme_color": "#0f9b8e",
-        "icons": [{"src": "favicon.svg", "sizes": "any", "type": "image/svg+xml"}],
-    }, indent=2))
     write(".nojekyll", "")
     counts = {"tracks": n_tracks, "lessons": n_rooms, "diagrams": n_diagrams, "terms": len(terms), "quizzes": n_rooms * 2}
     write("assets/data/counts.json", json.dumps(counts, indent=2))
     print(json.dumps(counts))
 
 
+def write_boot_scripts():
+    write(
+        "assets/js/theme-boot.js",
+        "try{var t=localStorage.getItem(\"canon-theme\");if(t!==\"aurora\")t=\"bloom\";"
+        "document.documentElement.dataset.theme=t;var f=localStorage.getItem(\"canon-font\");"
+        "if(f===\"sm\"||f===\"lg\")document.documentElement.dataset.font=f;"
+        "var ink=localStorage.getItem(\"canon-ink\");"
+        "if(ink&&/^#[0-9a-f]{6}$/i.test(ink))document.documentElement.style.setProperty(\"--ink\",ink);"
+        "}catch(err){document.documentElement.dataset.theme=\"bloom\";}\n",
+    )
+    write(
+        "assets/js/play.js",
+        """(function(){
+  var jobs=["RTP media","SDP offer and answer","SIP session setup","A price stays confirm"];
+  var want=["SIP session setup","SDP offer and answer","RTP media","A price stays confirm"];
+  var list=document.getElementById("order");
+  if(!list) return;
+  jobs.forEach(function(job){
+    var li=document.createElement("li");
+    li.textContent=job;
+    li.draggable=true;
+    li.dataset.job=job;
+    li.style.padding="8px";
+    li.style.margin="6px 0";
+    li.style.border="2px solid #0f766e";
+    li.style.borderRadius="12px";
+    li.addEventListener("dragstart",function(){li.classList.add("dragging");});
+    li.addEventListener("dragend",function(){li.classList.remove("dragging");});
+    list.appendChild(li);
+  });
+  list.addEventListener("dragover",function(ev){
+    ev.preventDefault();
+    var dragging=list.querySelector(".dragging");
+    var after=[].slice.call(list.children).find(function(child){
+      var box=child.getBoundingClientRect();
+      return ev.clientY < box.top + box.height/2;
+    });
+    if(!dragging) return;
+    if(after) list.insertBefore(dragging, after); else list.appendChild(dragging);
+  });
+  document.getElementById("check-order").addEventListener("click",function(){
+    var got=[].map.call(list.children,function(li){return li.dataset.job;});
+    var ok=got.every(function(item,i){return item===want[i];});
+    document.getElementById("play-note").textContent=ok?"That order matches the study habit.":"Not yet. SIP session setup, then SDP, then RTP. A price is a different object.";
+  });
+})();
+(function(){
+  var form=document.getElementById("sim-form");
+  if(!form) return;
+  var node="INVITE";
+  document.querySelectorAll("[data-sim-node]").forEach(function(btn){
+    btn.addEventListener("click",function(){
+      node=btn.getAttribute("data-sim-node");
+      document.querySelectorAll("[data-sim-node]").forEach(function(el){el.setAttribute("aria-pressed", el===btn?"true":"false");});
+    });
+  });
+  form.addEventListener("submit",function(event){
+    event.preventDefault();
+    var uri=document.getElementById("sim-uri").value.trim()||"sip:example.test";
+    var digit=document.getElementById("sim-dtmf").value.trim()||"—";
+    var branch=document.getElementById("sim-branch").value;
+    var branchLine=branch==="queue"?"IVR branch: queue. Simulated. No agent was offered a call.":branch==="voicemail"?"IVR branch: voicemail. Simulated. No mailbox was opened.":"IVR branch: hang up. Simulated BYE. No carrier was signaled.";
+    var step=node==="INVITE"?"Simulated INVITE to "+uri+". Next sketch: 100 Trying, then 180 Ringing. Not run on a network.":node==="180"?"Simulated 180 Ringing for "+uri+". Media is not flowing yet.":node==="200"?"Simulated 200 OK for "+uri+". The sketch then expects ACK, then RTP. Not run on a network.":node==="ACK"?"Simulated ACK. The teaching sketch would start RTP after this. No packets were sent.":"Simulated BYE for "+uri+". The sketch ends the dialog. Not run on a network.";
+    document.getElementById("sim-out").textContent=step+"\\nDTMF digit on the form: "+digit+" (not sent).\\n"+branchLine;
+  });
+})();
+""",
+    )
+
+
 if __name__ == "__main__":
+    write_boot_scripts()
     build_rooms()
     build_tracks()
     build_hubs()

@@ -24,6 +24,8 @@ const required = [
   "assets/js/frame.js",
   "assets/js/university.js",
   "assets/js/pwa.js",
+  "assets/js/theme-boot.js",
+  "assets/js/play.js",
   "assets/css/studio.css",
   "assets/icon-192.png",
   "assets/icon-512.png",
@@ -53,6 +55,6 @@ const body = chosen.map((rel) => `  "./${rel}",`).join("\n");
 const swPath = path.join(root, "sw.js");
 let sw = fs.readFileSync(swPath, "utf8");
 sw = sw.replace(/const SHELL_ASSETS = \[[\s\S]*?\];/, `const SHELL_ASSETS = [\n  "./",\n${body}\n];`);
-sw = sw.replace(/cpaas-lab-v\d+/, "cpaas-lab-v3");
+sw = sw.replace(/cpaas-lab-v\d+/, "cpaas-lab-v4");
 fs.writeFileSync(swPath, sw);
 console.log(`precache ${chosen.length + 1} files, ${total} bytes, budget ${budget}`);
