@@ -316,6 +316,75 @@ const WORLD_WORDS = new Set("capital france germany austria ireland australia ca
 const GENERIC_ENGLISH = new Set("time life home world page course help start people person spanish tokyo poem sea thank thanks meaning telephone calorie calories banana capital hiking restaurant population colour color breakfast winter rainfall lullaby haiku mango egg moon landing movie pizza weather flight story dragon cricket tire cake president bitcoin joke french goodbye server program mail email configure configuration article python javascript node decorator docker kubernetes postgres recipe headphone headphones bluetooth smtp cake".split(" "));
 WORLD_WORDS.forEach((word) => GENERIC_ENGLISH.add(word));
 
+/* Curated lab lexicon: lesson-title terms, glossary fronts, and product names.
+   Ordinary title or glossary words (price, name, number, page) are weak.
+   A weak word opens search only when every other content word is also in the lexicon
+   or is question scaffolding. A protocol, product, or glossary headword opens search. */
+const LEXICON_STRONG = new Set("cpaas paas ai uc sip sdp rtp srtp webrtc ivr acd sms mms did e164 e911 ng911 911 psap pbx twiml shaken stir passport 10dlc a2p dlc attestation attest cnam smsc dlr waba agi uri bearer token bearertoken integrity authentication commitment speech attendant dispatch conversation segment segmentcount gateway taskrouter opensips videobridge contactcenter shortcode operatorconnect freeswitch asterisk kamailio avaya ucce twilio vonage bandwidth sinch telnyx plivo infobip bird messagebird livekit jitsi jami matrix webhook inbound emergency ladder agent voice video offer dial domain trunk bridge media message messaging verify secret observability compliance cutover refer".split(" "));
+const LEXICON_WEAK = new Set("price prices pricing confirm confirms confirmation name names word words page pages open opened opening stay stays letter letters count counts number numbers call calls figure date record records recording key keys run runs line lines host hosts section article character characters vendor vendors company companies guide guides platform platforms contact center centers header headers identity caller callers room rooms private connection connections profile profiles query queries basic access dashboard silent minimum monthly automated participant participants operator connect registry insight insights metadata shared http redirect dual rule rules text answer answers code codes api apis field fields see".split(" "));
+const LEXICON_SCAFFOLD = new Set("long longer standard length many much extra different once still away into even mean means meaning describe describes described stand stands talk talks talking show shows shown called say says said come comes coming leave leaves fit fits fitting need needs keep keeps get gets treat treats claim claims sit sits stay stays watch watches join joins publish published mention mentions moving counting think thinking belong belongs allowed repeat should would could may might must whose which here there also only just thing things please tell tells told want wanted another really actually open opened opening page pages word words name names lesson lessons general whole part let lets make makes made using used use doing done about over again same without within during versus sentence sentences lab".split(" "));
+const LEXICON_FUZZY = [...LEXICON_STRONG].filter((word) => word.length >= 4);
+
+function foldLabPhrases(text) {
+  return normalize(text)
+    .replace(/\be 164\b/g, "e164")
+    .replace(/\be 911\b/g, "e911")
+    .replace(/\bng 911\b/g, "ng911")
+    .replace(/\b10 dlc\b/g, "10dlc")
+    .replace(/\bcontact centers?\b/g, "contactcenter")
+    .replace(/\bdirect inward dial\b/g, "did")
+    .replace(/\bshort codes?\b/g, "shortcode")
+    .replace(/\bbearer tokens?\b/g, "bearertoken")
+    .replace(/\boperator connect\b/g, "operatorconnect")
+    .replace(/\btask router\b/g, "taskrouter")
+    .replace(/\bopen sips\b/g, "opensips")
+    .replace(/\bvideo bridge\b/g, "videobridge");
+}
+
+function lexiconKind(word, syn, freq) {
+  if (!word || LEXICON_SCAFFOLD.has(word) || LEXICON_SCAFFOLD.has(stem(word))) return "";
+  if (LEXICON_STRONG.has(word)) return "strong";
+  if (LEXICON_WEAK.has(word)) return "weak";
+  const stemmed = stem(word);
+  if (LEXICON_STRONG.has(stemmed)) return "strong";
+  if (LEXICON_WEAK.has(stemmed)) return "weak";
+  const canonical = canon(word, syn);
+  if (canonical && canonical !== word) {
+    if (LEXICON_STRONG.has(canonical)) return "strong";
+    if (LEXICON_WEAK.has(canonical)) return "weak";
+  }
+  if (word.length < 4 || GENERIC_ENGLISH.has(word) || WORLD_WORDS.has(word)) return "";
+  const fix = fuzzy(word, LEXICON_FUZZY, word.length >= 7 ? 2 : 1, freq);
+  if (!fix || !LEXICON_STRONG.has(fix)) return "";
+  const prefix = sharedPrefix(word, fix);
+  if (prefix < 3 && !(word.length >= 7 && prefix >= 2)) return "";
+  return "strong";
+}
+
+function lexiconAllows(text, syn, freq) {
+  const parts = foldLabPhrases(text).split(" ").filter((word) => word && !STOP.has(word) && !FILLER.has(word));
+  let strong = 0;
+  let weak = 0;
+  let foreign = 0;
+  for (const word of parts) {
+    if (LEXICON_SCAFFOLD.has(word) || LEXICON_SCAFFOLD.has(stem(word))) continue;
+    const kind = lexiconKind(word, syn, freq);
+    if (kind === "strong") {
+      strong += 1;
+      continue;
+    }
+    if (kind === "weak") {
+      weak += 1;
+      continue;
+    }
+    if (/^\d+$/.test(word)) continue;
+    if (word.length < 3 && !LEXICON_STRONG.has(word)) continue;
+    foreign += 1;
+  }
+  if (strong >= 1) return true;
+  return weak >= 1 && foreign === 0;
+}
+
 function hasCuratedTerm(text, syn, pool, freq) {
   const parts = normalize(text).split(" ").filter((word) => word && !STOP.has(word) && !FILLER.has(word));
   for (const word of parts) {
@@ -1082,6 +1151,7 @@ export function createRetriever(index) {
     const limited = String(raw || "").slice(0, 400);
     const routed = route(limited, host || {});
     if (!routed.searchText) return routed;
+    if (!lexiconAllows(routed.searchText, syn, freq)) return fallbackAnswer([], routed.followMode, true);
     if (offTopicWithoutCpaas(routed.searchText, syn, pool, freq)) return fallbackAnswer([], routed.followMode, true);
     if (!hasDomainTerm(routed.searchText, domain, syn, pool, freq)) return fallbackAnswer([], routed.followMode, true);
     const seed = matchSeed(routed.searchText);
