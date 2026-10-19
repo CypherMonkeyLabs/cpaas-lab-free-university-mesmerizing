@@ -1,0 +1,483 @@
+{
+  "questions": 102,
+  "beginner": {
+    "total": 40,
+    "relevant": 19,
+    "relevantPct": 47.5,
+    "confidentWrong": 2,
+    "fallback": 17,
+    "fallbackPct": 42.5
+  },
+  "typo": {
+    "total": 15,
+    "relevant": 7,
+    "relevantPct": 46.7,
+    "confidentWrong": 1,
+    "fallback": 3,
+    "fallbackPct": 20
+  },
+  "offtopic": {
+    "total": 15,
+    "relevant": 15,
+    "relevantPct": 100,
+    "confidentWrong": 0,
+    "fallback": 15,
+    "fallbackPct": 100
+  },
+  "nav": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0,
+    "fallback": 0,
+    "fallbackPct": 0
+  },
+  "inject": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0,
+    "fallback": 10,
+    "fallbackPct": 100
+  },
+  "followTurns": {
+    "total": 12,
+    "relevant": 8,
+    "relevantPct": 66.7,
+    "confidentWrong": 1,
+    "fallback": 3,
+    "fallbackPct": 25
+  },
+  "followPairs": {
+    "ok": 3,
+    "total": 6
+  },
+  "confidentWrongInDomain": [
+    {
+      "id": "b06",
+      "q": "when does a text message stop fitting in one SMS",
+      "href": "rooms/message-verify.html",
+      "text": "Verify is not the same API as send-an-SMS, even when SMS is one of its channels. Vonage says so by giving Verify its own page and a channel list. Twilio's Verify navigation include"
+    },
+    {
+      "id": "b15",
+      "q": "how is a queue different from an IVR menu",
+      "href": "rooms/twiml-ivr.html",
+      "text": "An IVR, in the encyclopedia, gathers and routes. TwiML is one vendor's XML for telling Twilio what to do on a call. Say speaks. Play plays a file. Gather collects input. Dial, Queu"
+    },
+    {
+      "id": "t13",
+      "q": "observabilty counts",
+      "href": "tracks/T10.html",
+      "text": "Counts you can defend, and prices you confirm. 3 lessons. Each lesson cites the pages that were opened, and marks the rest confirm. Source date: 2026-10. Unconfirmed where the page"
+    },
+    {
+      "id": "f01.2",
+      "q": "and the media",
+      "href": "rooms/mms-media.html",
+      "text": "The forty-second video line is the encyclopedia's description of MMS, not a promise from every carrier. Bandwidth's numbers are narrower and more useful for that API: 3.75 MB, 48 h"
+    }
+  ],
+  "misses": [
+    {
+      "id": "b02",
+      "group": "beginner",
+      "q": "who carries the audio once a session exists",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b03",
+      "group": "beginner",
+      "q": "how does a browser describe media it can use",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: RTP, SRTP, and WebRTC; MMS and the media a page will store. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b04",
+      "group": "beginner",
+      "q": "why do phone numbers get a plus and a country code",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b06",
+      "group": "beginner",
+      "q": "when does a text message stop fitting in one SMS",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/message-verify.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Verify is not the same API as send-an-SMS, even when SMS is one of its channels. Vonage says so by giving Verify its own page and a channel list. Twilio's Verify navigation include"
+    },
+    {
+      "id": "b07",
+      "group": "beginner",
+      "q": "what extra does a picture message need",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Messaging and verify; SMS, and the 160-character line. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b08",
+      "group": "beginner",
+      "q": "why do US app-to-person texts talk about brands and campaigns",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b11",
+      "group": "beginner",
+      "q": "what words show up around enhanced 911",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Where the vendors put the same words; Contact center words that stay general. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b13",
+      "group": "beginner",
+      "q": "does a webhook come into the app or leave it",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/webhook-direction.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Direction is the whole lesson. Your POST to the vendor creates or asks. The vendor's HTTP request to you is the event. Mixing them up looks like a timeout when you are waiting on t"
+    },
+    {
+      "id": "b15",
+      "group": "beginner",
+      "q": "how is a queue different from an IVR menu",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/twiml-ivr.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "An IVR, in the encyclopedia, gathers and routes. TwiML is one vendor's XML for telling Twilio what to do on a call. Say speaks. Play plays a file. Gather collects input. Dial, Queu"
+    },
+    {
+      "id": "b16",
+      "group": "beginner",
+      "q": "what sentence defines a communications platform",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b17",
+      "group": "beginner",
+      "q": "name the platforms whose home pages this lab opened",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b19",
+      "group": "beginner",
+      "q": "what open projects sit beside FreeSWITCH",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: FreeSWITCH and Asterisk; Voice and video names that opened. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b20",
+      "group": "beginner",
+      "q": "what should stay out of a public repository",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b22",
+      "group": "beginner",
+      "q": "which counts are safe to repeat from an opened page",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b23",
+      "group": "beginner",
+      "q": "what is a teaching ladder allowed to claim",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/call-flow.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Put the arrows in an order you can defend. Registration and session setup, then media, and in parallel the HTTP event to your application if the platform is programmable. Media Str"
+    },
+    {
+      "id": "b27",
+      "group": "beginner",
+      "q": "what is a one-time passcode flow called here",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b30",
+      "group": "beginner",
+      "q": "what habit should I keep with a phone number",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b34",
+      "group": "beginner",
+      "q": "which older product names are only names here",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b35",
+      "group": "beginner",
+      "q": "what should I watch if I am counting calls",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b36",
+      "group": "beginner",
+      "q": "what is ICE in a browser call",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b38",
+      "group": "beginner",
+      "q": "what is a SIP REGISTER for",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: What SIP is for; A, B, and C on the STIR article. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "t03",
+      "group": "typo",
+      "q": "bandwith emergncy",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/bandwidth-911.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Two base URLs means two products until someone shows you they are the same account. The guide's instruction is to select the one your account uses. Writing both into one client is "
+    },
+    {
+      "id": "t04",
+      "group": "typo",
+      "q": "telnyx vs sinch",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/five-platforms.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Five names, five different sentences. Bandwidth's own page is the product list: voice, messaging, emergency calling, WebRTC, and authentication, plus integration names you will mee"
+    },
+    {
+      "id": "t05",
+      "group": "typo",
+      "q": "infobip messge",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/message-verify.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Verify is not the same API as send-an-SMS, even when SMS is one of its channels. Vonage says so by giving Verify its own page and a channel list. Twilio's Verify navigation include"
+    },
+    {
+      "id": "t09",
+      "group": "typo",
+      "q": "livekit agnt",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: AI voice agents, only the sentences that opened; LiveKit, Jitsi, Matrix, and Jami. I only answer from this lab's lessons. You can also use Sea"
+    },
+    {
+      "id": "t12",
+      "group": "typo",
+      "q": "dtmf digts",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "t13",
+      "group": "typo",
+      "q": "observabilty counts",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "tracks/T10.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Counts you can defend, and prices you confirm. 3 lessons. Each lesson cites the pages that were opened, and marks the rest confirm. Source date: 2026-10. Unconfirmed where the page"
+    },
+    {
+      "id": "t14",
+      "group": "typo",
+      "q": "no secrtes in git",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/no-secrets.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "The practical rule is small. Tokens, signing keys, and message bodies stay out of git and out of this lab. The Twilio security title shows there is a docs section. It does not, in "
+    },
+    {
+      "id": "t15",
+      "group": "typo",
+      "q": "from a pbx to a trunck",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Leaving a PBX without inventing a cutover; Two domains and a SIP trunk. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "f01.2",
+      "group": "follow",
+      "pair": "f01",
+      "q": "and the media",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/mms-media.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "The forty-second video line is the encyclopedia's description of MMS, not a promise from every carrier. Bandwidth's numbers are narrower and more useful for that API: 3.75 MB, 48 h"
+    },
+    {
+      "id": "f04.2",
+      "group": "follow",
+      "pair": "f04",
+      "q": "what about Bandwidth",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I was still on “E911, the PSAP, and NG911”, and that follow-up is not in these pages. Closest pages: Bandwidth's two emergency hosts; Bandwidth, Sinch, Telny"
+    },
+    {
+      "id": "f05.1",
+      "group": "follow",
+      "pair": "f05",
+      "q": "what is an IVR menu",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Contact center words that stay general; Leaving a PBX without inventing a cutover. I only answer from this lab's lessons. You can also use Sea"
+    },
+    {
+      "id": "f05.2",
+      "group": "follow",
+      "pair": "f05",
+      "q": "and a queue",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    }
+  ]
+}

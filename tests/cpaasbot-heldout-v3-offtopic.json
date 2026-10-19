@@ -1,0 +1,26 @@
+{
+  "note": "Round 4 off-topic set. Written before this file was scored and before the allowlist gate. Do not edit these questions after seeing a score.",
+  "questions": [
+    {"id": "o01", "group": "offtopic", "q": "what is the Tesla stock price"},
+    {"id": "o02", "group": "offtopic", "q": "Tesla stock price"},
+    {"id": "o03", "group": "offtopic", "q": "stock price of apple"},
+    {"id": "o04", "group": "offtopic", "q": "how much is an ounce of gold worth"},
+    {"id": "o05", "group": "offtopic", "q": "who is the chief executive of nvidia"},
+    {"id": "o06", "group": "offtopic", "q": "what is the boiling point of nitrogen"},
+    {"id": "o07", "group": "offtopic", "q": "how do I tie a bowline knot"},
+    {"id": "o08", "group": "offtopic", "q": "translate good morning into japanese"},
+    {"id": "o09", "group": "offtopic", "q": "what is the capital of portugal"},
+    {"id": "o10", "group": "offtopic", "q": "how do I bake banana bread"},
+    {"id": "o11", "group": "offtopic", "q": "who wrote pride and prejudice"},
+    {"id": "o12", "group": "offtopic", "q": "how many miles are in a marathon"},
+    {"id": "o13", "group": "offtopic", "q": "what is photosynthesis"},
+    {"id": "o14", "group": "offtopic", "q": "which laptop should a college student buy"},
+    {"id": "o15", "group": "offtopic", "q": "how do I patch a punctured inner tube"},
+    {"id": "o16", "group": "offtopic", "q": "what year did the titanic sink"},
+    {"id": "o17", "group": "offtopic", "q": "how do I make cold brew coffee"},
+    {"id": "o18", "group": "offtopic", "q": "what is the square root of 256"},
+    {"id": "o19", "group": "offtopic", "q": "who won the super bowl in 2018"},
+    {"id": "o20", "group": "offtopic", "q": "explain compound interest"}
+  ],
+  "pairs": []
+}

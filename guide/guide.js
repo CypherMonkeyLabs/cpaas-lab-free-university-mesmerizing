@@ -32,7 +32,7 @@
     monkeySvg() + "</button>" +
     '<section id="bot-panel" class="bot-panel" hidden>' +
     '<button type="button" class="sheet-handle" data-sheet-close aria-label="Close the guide"><span></span></button>' +
-    '<p class="bot-disclaimer">I only repeat the notes already on these pages. I am not Twilio, Vonage, Bandwidth, or any other vendor, and this chat is not official support.</p>' +
+    '<p class="bot-disclaimer">Cypher Monkey, a lifelong student and AI builder, keeps these notes. I only repeat the notes already on these pages. I am not Twilio, Vonage, Bandwidth, or any other vendor, and this chat is not official support.</p>' +
     '<p class="bot-disclaimer">This is an independent, free, learning-only student project. It is not vendor documentation and not legal advice. Confirm version-specific steps in the cited guide before you change a live system.</p>' +
     '<div class="choice-row" data-choices></div>' +
     '<div class="bot-log" role="log" aria-live="polite"></div>' +
@@ -47,9 +47,7 @@
     '<label>Pitch <input data-pitch type="range" min="0.7" max="1.3" step="0.05" value="1" aria-label="Speech pitch"></label>' +
     '<button type="button" data-ambient aria-pressed="false">Ambient off</button>' +
     "</div></details>" +
-    '<form class="bot-form"><button type="button" data-mic aria-label="Voice input">Mic</button>' +
-    '<input type="text" aria-label="Type a question" placeholder="Type if the mic is unavailable" autocomplete="off">' +
-    '<button type="submit">Send</button></form></section>';
+    '<div data-cpaas-chat></div></section>';
   document.body.appendChild(dock);
 
   var monkey = dock.querySelector(".monkey-btn");
@@ -59,15 +57,12 @@
   var voiceName = dock.querySelector("[data-voice-name]");
   var rate = dock.querySelector("[data-rate]");
   var pitch = dock.querySelector("[data-pitch]");
-  var input = dock.querySelector(".bot-form input");
   var idleNote = dock.querySelector("[data-idle]");
   var suppressClick = false;
   var speaking = false;
   var readNodes = [];
   var readAt = 0;
   var ambient = null;
-  var catalog = [];
-
   if (state.rate) rate.value = state.rate;
   if (state.pitch) pitch.value = state.pitch;
 
@@ -108,22 +103,34 @@
     });
     return guard;
   }
+  function shortSheet() { return window.matchMedia("(max-height: 520px)").matches; }
   function openPanel(flag) {
     panel.hidden = !flag;
     dock.classList.toggle("is-open", !!flag);
+    document.body.classList.toggle("guide-open", !!flag);
     monkey.setAttribute("aria-expanded", flag ? "true" : "false");
     if (flag) pose("cheer");
     if (flag && isPhone()) {
-      var phone = document.querySelector(".phone-bar");
-      var phoneTop = phone ? phone.getBoundingClientRect().top : window.innerHeight;
-      var topLimit = Math.round(guardBottom() + 12);
-      var maxH = Math.max(140, phoneTop - 12 - topLimit);
-      panel.style.maxHeight = maxH + "px";
-      dock.style.maxHeight = maxH + "px";
-      dock.style.top = topLimit + "px";
-      dock.style.bottom = "auto";
       dock.style.left = "8px";
       dock.style.right = "8px";
+      if (shortSheet()) {
+        panel.style.maxHeight = "none";
+        dock.style.maxHeight = "none";
+        dock.style.top = "8px";
+        dock.style.bottom = "8px";
+      } else {
+        var phone = document.querySelector(".phone-bar");
+        var barBox = phone ? phone.getBoundingClientRect() : null;
+        var phoneTop = barBox && barBox.height > 0 ? barBox.top : window.innerHeight;
+        var topLimit = Math.round(guardBottom() + 12);
+        var maxH = Math.max(280, phoneTop - 12 - topLimit);
+        panel.style.maxHeight = maxH + "px";
+        dock.style.maxHeight = maxH + "px";
+        dock.style.top = topLimit + "px";
+        dock.style.bottom = "auto";
+      }
+      var field = dock.querySelector("#py-chat-input");
+      if (field && typeof field.scrollIntoView === "function") field.scrollIntoView({ block: "nearest" });
     } else {
       clearPhoneSheet();
     }
@@ -146,11 +153,6 @@
     }
     openPanel(panel.hidden);
   });
-
-  function pages() { return catalog; }
-  fetch(base + "assets/data/catalog.json").then(function (res) { return res.ok ? res.json() : null; }).then(function (data) {
-    catalog = (data && data.pages) || [];
-  }).catch(function () { catalog = []; });
 
   function go(href) { location.href = base + href; }
   function currentExport() {
@@ -378,65 +380,18 @@
     });
   });
 
-  var Rec = window.SpeechRecognition || window.webkitSpeechRecognition;
-  var mic = dock.querySelector("[data-mic]");
-  if (!Rec) mic.hidden = false;
-  mic.addEventListener("click", function () {
-    if (!Rec) {
-      sayLocal("This browser has no speech recognition. Type the question instead.");
-      input.focus();
-      return;
-    }
-    var rec = new Rec();
-    rec.lang = "en-US";
-    rec.onresult = function (event) {
-      input.value = event.results[0][0].transcript;
-      answer(input.value);
-    };
-    rec.onerror = function () {
-      sayLocal("I could not hear that. Type the question instead.");
-      input.focus();
-    };
-    try { rec.start(); pose("listen"); sayLocal("Listening."); }
-    catch (err) { sayLocal("The mic did not start. Type the question instead."); input.focus(); }
-  });
-
-  function answer(text) {
-    var q = (text || "").trim();
-    if (!q) return;
-    sayLocal("You: " + q);
-    input.value = "";
-    var lower = q.toLowerCase();
-    pose("think");
-    if (/download|export|sheet|zip/.test(lower)) {
-      sayLocal("The export for this section is ready.");
-      setChoices([{ label: "Open the export", run: function () { location.href = currentExport(); } }]);
-      return;
-    }
-    if (/10 minute|ten minute|quick/.test(lower)) { go("start.html#ten"); return; }
-    if (/full course|start here|learn/.test(lower)) { go("start.html#path"); return; }
-    var hit = null;
-    pages().forEach(function (row) {
-      if (hit) return;
-      if (lower.indexOf(row.title.toLowerCase()) !== -1 || (row.keys || []).some(function (key) { return lower.indexOf(key) !== -1; })) hit = row;
-    });
-    if (/diagram/.test(lower) && !hit) hit = { href: "diagrams.html", title: "Diagrams" };
-    if (/flow/.test(lower) && !hit) hit = { href: "flows.html", title: "Flows" };
-    if (/play|quiz/.test(lower) && !hit) hit = { href: "play.html", title: "Play" };
-    if (/help|tour/.test(lower)) { sayLocal("Open Help to replay the tour."); setChoices([{ label: "Help", run: function () { go("help.html"); } }]); return; }
-    if (hit) {
-      sayLocal("Opening " + hit.title + ".");
-      go(hit.href);
-      return;
-    }
-    var section = document.querySelector("main h1");
-    sayLocal("I do not have a separate note for that. On this page, start with " + (section ? section.textContent : "the first heading") + ". Confirm anything version-specific in the cited guide before you rely on it.");
-    introCards();
-  }
-  dock.querySelector(".bot-form").addEventListener("submit", function (event) {
-    event.preventDefault();
-    answer(input.value);
-  });
+  var chatCss = document.createElement("link");
+  chatCss.rel = "stylesheet";
+  chatCss.href = base + "shared/pybot-chat/chat.css";
+  document.head.appendChild(chatCss);
+  var studioCss = document.createElement("link");
+  studioCss.rel = "stylesheet";
+  studioCss.href = base + "assets/css/studio.css";
+  document.head.appendChild(studioCss);
+  var chatScript = document.createElement("script");
+  chatScript.type = "module";
+  chatScript.src = base + "guide/cpaas-chat.js";
+  document.body.appendChild(chatScript);
 
   dock.querySelector("[data-ambient]").addEventListener("click", function (event) {
     var on = event.currentTarget.getAttribute("aria-pressed") !== "true";

@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "name": "Outfit",
+      "version": "OFL 1.1, copyright 2021, file version unconfirmed beyond the committed woff2",
+      "licence": "SIL Open Font License 1.1",
+      "url": "https://github.com/Outfitio/Outfit-Fonts",
+      "licence_file": "assets/fonts/Outfit-OFL.txt",
+      "files": [
+        {
+          "path": "assets/fonts/outfit-latin.woff2",
+          "sha256": "3a462c85b910c74e32c9cfaa5a1906c72043606f7bff6f6ff90a7de06468d20c"
+        },
+        {
+          "path": "assets/fonts/Outfit-OFL.txt",
+          "sha256": "c676351bf8576b9aba743cd5eaa8c0e7ee0d51f805d720447b4df4ddb6a2e416"
+        }
+      ]
+    },
+    {
+      "name": "pybot-chat",
+      "version": "copied 2026-10-19 from dd86534c9d439ee2d72e9b8397be67c5cb5dd375",
+      "licence": "MIT",
+      "url": "https://github.com/CypherMonkeyLabs/python-lab-free-university-mesmerizing",
+      "licence_file": "LICENSE",
+      "files": [
+        {
+          "path": "shared/pybot-chat/engine.js",
+          "sha256": "51593d370627dff6eabbe8e038e59434b1b358d8342e8c77c50a8654291a575d"
+        },
+        {
+          "path": "shared/pybot-chat/ui.js",
+          "sha256": "b5f701f3ab621b17bfa4061224d20a119f453b48aa3a45cefd9e349001e67afc"
+        },
+        {
+          "path": "shared/pybot-chat/chat.css",
+          "sha256": "902842e93497b344e6e1f57aa4768498b7372bee4295f0f5d1f18d54a42793ee"
+        }
+      ]
+    }
+  ]
+}

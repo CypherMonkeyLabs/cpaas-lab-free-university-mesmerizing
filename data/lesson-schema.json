@@ -1,0 +1,6 @@
+{
+  "title": "CPaaS Lab lesson map",
+  "required": ["key", "title", "level", "outcomes", "sources", "last_verified"],
+  "level": { "minimum": 0, "maximum": 10 },
+  "last_verified": "null or YYYY-MM-DD"
+}

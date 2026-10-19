@@ -1,0 +1,273 @@
+{
+  "questions": 102,
+  "beginner": {
+    "total": 40,
+    "relevant": 29,
+    "relevantPct": 72.5,
+    "confidentWrong": 1,
+    "fallback": 4,
+    "fallbackPct": 10
+  },
+  "typo": {
+    "total": 15,
+    "relevant": 13,
+    "relevantPct": 86.7,
+    "confidentWrong": 0,
+    "fallback": 1,
+    "fallbackPct": 6.7
+  },
+  "offtopic": {
+    "total": 15,
+    "relevant": 15,
+    "relevantPct": 100,
+    "confidentWrong": 0,
+    "fallback": 15,
+    "fallbackPct": 100
+  },
+  "nav": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0,
+    "fallback": 0,
+    "fallbackPct": 0
+  },
+  "inject": {
+    "total": 10,
+    "relevant": 10,
+    "relevantPct": 100,
+    "confidentWrong": 0,
+    "fallback": 10,
+    "fallbackPct": 100
+  },
+  "followTurns": {
+    "total": 12,
+    "relevant": 8,
+    "relevantPct": 66.7,
+    "confidentWrong": 0,
+    "fallback": 2,
+    "fallbackPct": 16.7
+  },
+  "followPairs": {
+    "ok": 3,
+    "total": 6
+  },
+  "confidentWrongInDomain": [
+    {
+      "id": "b13",
+      "q": "what is attestation in caller identity",
+      "href": "rooms/stir-letters.html",
+      "text": "The letters are the part you can teach without a vendor portal. A is the whole number. B is a known customer and an unverified extension. C is only a known gateway."
+    }
+  ],
+  "misses": [
+    {
+      "id": "b06",
+      "group": "beginner",
+      "q": "what is a DID",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b08",
+      "group": "beginner",
+      "q": "how long is a standard SMS",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: SMS, and the 160-character line; 10DLC is a name on the compliance pages. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b11",
+      "group": "beginner",
+      "q": "what do the letters in STIR stand for",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/stir-letters.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "The letters are the part you can teach without a vendor portal. A is the whole number. B is a known customer and an unverified extension. C is only a known gateway."
+    },
+    {
+      "id": "b13",
+      "group": "beginner",
+      "q": "what is attestation in caller identity",
+      "relevant": false,
+      "confidentWrong": true,
+      "clean": false,
+      "href": "rooms/stir-letters.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "The letters are the part you can teach without a vendor portal. A is the whole number. B is a known customer and an unverified extension. C is only a known gateway."
+    },
+    {
+      "id": "b16",
+      "group": "beginner",
+      "q": "what is a webhook",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/webhook-direction.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Direction is the whole lesson. Your POST to the vendor creates or asks. The vendor's HTTP request to you is the event. Mixing them up looks like a timeout when you are waiting on t"
+    },
+    {
+      "id": "b19",
+      "group": "beginner",
+      "q": "what does CPaaS mean",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/cpaas-word.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Read the section before you collect logos. Platform as a service, on the article, is the broader cloud model: users provision and run a platform without building the infrastructure"
+    },
+    {
+      "id": "b20",
+      "group": "beginner",
+      "q": "which companies does this lab name as platforms",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "tracks/T1.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "The word, then the companies whose pages opened. 3 lessons. Each lesson cites the pages that were opened, and marks the rest confirm. Source date: 2026-10. Unconfirmed where the pa"
+    },
+    {
+      "id": "b21",
+      "group": "beginner",
+      "q": "how are Twilio and Vonage described here",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/twilio-vonage.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Use the articles for the company and the product family, not for this month's invoice. Twilio's story on the page is an API company: voice in 2008, messaging in 2010, later Authy a"
+    },
+    {
+      "id": "b28",
+      "group": "beginner",
+      "q": "which way does a webhook travel",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: Webhooks come inbound; Offer, answer, and SDP. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b31",
+      "group": "beginner",
+      "q": "how do I think about moving off a PBX",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b32",
+      "group": "beginner",
+      "q": "where do secrets belong",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/no-secrets.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "The practical rule is small. Tokens, signing keys, and message bodies stay out of git and out of this lab. The Twilio security title shows there is a docs section. It does not, in "
+    },
+    {
+      "id": "t02",
+      "group": "typo",
+      "q": "webhok direction",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/webhook-direction.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Direction is the whole lesson. Your POST to the vendor creates or asks. The vendor's HTTP request to you is the event. Mixing them up looks like a timeout when you are waiting on t"
+    },
+    {
+      "id": "t03",
+      "group": "typo",
+      "q": "e164 numbrs",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. Closest pages: How a guide tells you to get a number; Numbers you may repeat. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "f02.1",
+      "group": "follow",
+      "pair": "f02",
+      "q": "what is a webhook",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/webhook-direction.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "Direction is the whole lesson. Your POST to the vendor creates or asks. The vendor's HTTP request to you is the event. Mixing them up looks like a timeout when you are waiting on t"
+    },
+    {
+      "id": "f03.1",
+      "group": "follow",
+      "pair": "f03",
+      "q": "what is E.164",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "f03.2",
+      "group": "follow",
+      "pair": "f03",
+      "q": "what about DID",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "f04.1",
+      "group": "follow",
+      "pair": "f04",
+      "q": "what is STIR",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "rooms/stir-letters.html",
+      "mode": "answer",
+      "intent": "",
+      "text": "The letters are the part you can teach without a vendor portal. A is the whole number. B is a known customer and an unverified extension. C is only a known gateway."
+    }
+  ]
+}
