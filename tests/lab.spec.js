@@ -42,7 +42,11 @@ test.describe("phone", () => {
     await expect(page.locator("main h1")).toBeVisible();
     await shot(page, "home-390.png");
     await page.locator("[data-open-guide]").click();
-    await expect(page.locator("#py-chat-input")).toBeVisible();
+    const input = page.locator("#py-chat-input");
+    const send = page.locator(".py-chat-form button[type=submit]");
+    await expect(input).toBeVisible();
+    await expect(send).toBeVisible();
+    expect((await input.boundingBox()).width).toBeGreaterThanOrEqual(180);
     await shot(page, "bot-390.png");
     await page.goto("/rooms/sip-jobs.html");
     await expect(page.locator("main h1")).toContainText(/SIP/);
@@ -95,6 +99,7 @@ test.describe("short phone", () => {
     expect(covered.send.inView).toBe(true);
     expect(covered.input.covered).toBe(false);
     expect(covered.send.covered).toBe(false);
+    expect((await input.boundingBox()).width).toBeGreaterThanOrEqual(180);
     await input.fill("what is SIP");
     await send.click();
     await expect(page.locator(".py-msg-bot").last()).toContainText(/SIP/);
