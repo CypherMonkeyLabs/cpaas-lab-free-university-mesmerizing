@@ -158,7 +158,32 @@
   });
 
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
-    navigator.serviceWorker.register(fromRoot("sw.js")).catch(function () { /* file or private mode */ });
+    navigator.serviceWorker.register(fromRoot("sw.js"), { scope: fromRoot("./") }).catch(function () { /* file or private mode */ });
+  }
+  var stage = document.querySelector(".hero-stage");
+  if (stage && !stage.querySelector(".aurora")) {
+    var aurora = document.createElement("div");
+    aurora.className = "aurora";
+    aurora.setAttribute("aria-hidden", "true");
+    stage.prepend(aurora);
+  }
+  var trackMap = document.querySelector(".track-map");
+  if (trackMap && !document.querySelector(".worlds-note")) {
+    var worlds = document.createElement("p");
+    worlds.className = "worlds-note";
+    worlds.textContent = "Twelve topic worlds. Each tile is a track. Nothing here is a score.";
+    trackMap.before(worlds);
+  }
+  var displayPanel = document.getElementById("display-panel");
+  if (displayPanel && !displayPanel.querySelector("[data-pwa-install]")) {
+    var install = document.createElement("button");
+    install.type = "button";
+    install.setAttribute("data-pwa-install", "");
+    install.textContent = "Install app";
+    displayPanel.appendChild(install);
+    var pwaScript = document.createElement("script");
+    pwaScript.src = fromRoot("assets/js/pwa.js");
+    document.body.appendChild(pwaScript);
   }
 
   function motionOff() {

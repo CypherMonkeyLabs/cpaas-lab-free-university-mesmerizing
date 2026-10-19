@@ -1,0 +1,88 @@
+/* Topic worlds, aurora, and the call-flow simulator. No external images. */
+.hero-stage { position: relative; }
+.aurora {
+  position: absolute;
+  inset: -8% -6% auto;
+  height: 70%;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 40%, rgba(45, 212, 191, 0.45), transparent 55%),
+    radial-gradient(circle at 80% 30%, rgba(167, 139, 250, 0.4), transparent 50%),
+    radial-gradient(circle at 50% 80%, rgba(251, 191, 36, 0.28), transparent 45%);
+  filter: blur(8px);
+  animation: aurora-drift 14s ease-in-out infinite alternate;
+  z-index: 0;
+}
+.hero-diagram, .hero-3d { position: relative; z-index: 1; }
+@keyframes aurora-drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to { transform: translate3d(0, 12px, 0) scale(1.04); }
+}
+.worlds-note {
+  margin: 0 0 8px;
+  font-weight: 700;
+}
+.track-map { perspective: 900px; }
+.track-tile {
+  transform-style: preserve-3d;
+  transition: transform 0.35s ease;
+}
+.track-tile:hover { transform: translateY(-4px) rotateX(4deg); }
+.track-tile:focus-visible,
+.call-sim button:focus-visible,
+.call-sim input:focus-visible,
+.call-sim select:focus-visible,
+.py-chat-form button:focus-visible,
+#py-chat-input:focus-visible {
+  outline: 3px solid #0f766e;
+  outline-offset: 2px;
+}
+.call-sim {
+  margin: 28px 0;
+  padding: 16px;
+  border: 2px solid #0f766e;
+  border-radius: 16px;
+  background: #f0fdfa;
+  color: #042f2e;
+}
+html[data-theme="aurora"] .call-sim {
+  background: #102033;
+  color: #eef4ff;
+  border-color: #5eead4;
+}
+.sim-flag { font-weight: 700; }
+.sim-nodes, .sim-form { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.sim-form label { display: flex; flex-direction: column; gap: 4px; min-width: 12rem; flex: 1; }
+.call-sim button, .call-sim select, .call-sim input {
+  min-height: 44px;
+  border-radius: 10px;
+  border: 2px solid #0f766e;
+  background: #fff;
+  color: #042f2e;
+  font: inherit;
+  padding: 6px 10px;
+}
+html[data-theme="aurora"] .call-sim button,
+html[data-theme="aurora"] .call-sim select,
+html[data-theme="aurora"] .call-sim input {
+  background: #0b1220;
+  color: #eef4ff;
+  border-color: #5eead4;
+}
+.call-sim button[aria-pressed="true"] { background: #99f6e4; color: #042f2e; }
+#sim-out {
+  white-space: pre-wrap;
+  padding: 12px;
+  border-radius: 12px;
+  background: #042f2e;
+  color: #ecfeff;
+}
+.quiz-note { font-weight: 700; }
+@media (max-width: 420px) {
+  .call-sim { padding: 12px; }
+  .sim-form label { min-width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .aurora, .track-tile, .hero-3d, .hero-3d * { animation: none !important; transition: none !important; }
+  .track-tile:hover { transform: none; }
+}

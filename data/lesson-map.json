@@ -1,0 +1,775 @@
+{
+  "lab": "cpaas",
+  "note": "Levels follow the track number: T1 is 0 through T11 is 10. T12 shares level 10. last_verified is null because the pages record 2026-10, not a day.",
+  "lessons": [
+    {
+      "key": "rooms/ai-agents",
+      "title": "AI voice agents, only the sentences that opened",
+      "level": 8,
+      "outcomes": [
+        "LiveKit's Agents introduction says the framework lets you add a Python or Node.js program to a LiveKit room as a realtime participant.",
+        "It says LiveKit Cloud includes managed deployment and built-in observability with transcripts and traces.",
+        "LiveKit's telephony page says trunks and dispatch rules extend the room, participant, and track model, and that a SIP participant represents a caller.",
+        "Vonage's Voice page says you can create IVRs and voice bots, with speech to text and WebSockets.",
+        "Twilio's voice navigation names AI agents, Conversation Relay, and Virtual Agent. Telnyx's docs navigation names Agents and LiveKit on Telnyx, marked Beta. Plivo's docs home names Voice AI and SIP trunking toward LiveKit."
+      ],
+      "sources": [
+        "https-docs-livekit-io-agents",
+        "https-docs-livekit-io-telephony",
+        "https-developer-vonage-com-en-voice-voice-api-overview",
+        "https-www-twilio-com-docs-voice",
+        "https-developers-telnyx-com-docs-overview",
+        "https-www-plivo-com-docs",
+        "conversation-relay-websocket-schema-confirm",
+        "telnyx-agent-prices-and-the-beta-livekit-setup-steps-confirm",
+        "a-g-114-delay-figure-confirm-that-recommendation-was-not-opened"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/bandwidth-911",
+      "title": "Bandwidth's two emergency hosts",
+      "level": 5,
+      "outcomes": [
+        "Bandwidth's emergency guide says the Emergency Services APIs are hosted with the Dashboard Service and the 911 Access Dashboard.",
+        "The Dashboard base URL on that page is https://app.bandwidth.com/api/.",
+        "The 911 Access Dashboard base URL on that page is https://service.dashcs.com/dash-api/xml/emergencyprovisioning/v1/.",
+        "The page says to pick the API that matches the account, and to ask the account manager if you are unsure.",
+        "Bandwidth's home page lists an Emergency Calling API beside voice and messaging, and the voice page says you can manage whitelisted IPs for Voice and E911."
+      ],
+      "sources": [
+        "https-dev-bandwidth-com-docs-emergency",
+        "https-www-bandwidth-com",
+        "https-dev-bandwidth-com-docs-voice",
+        "https-en-wikipedia-org-wiki-enhanced-911",
+        "dynamic-location-routing-behavior-confirm",
+        "a-legal-opinion-on-who-must-provide-e911-confirm-these-are-study-notes"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/browser-and-mesh",
+      "title": "LiveKit, Jitsi, Matrix, and Jami",
+      "level": 10,
+      "outcomes": [
+        "Jitsi's handbook says Jitsi is a video conferencing platform built from open-source projects, and the article says the project hosts meet.jit.si for free community use.",
+        "The article names Jitsi Meet, Jitsi Videobridge, and the older Jitsi Desktop, once called SIP Communicator.",
+        "Matrix's spec says it defines open APIs for decentralised communication over a federation of servers with no single point of control, using JSON, for IM, VoIP signalling, and bridging silos.",
+        "Jami's site says it is free, end-to-end encrypted, and private, with messaging, calls, conferences, and screen sharing, and that it can function as a SIP client.",
+        "The Jami site's news list includes an item dated 1 September 2026 titled Jami Web, First Preview. That is a page date, not a standard."
+      ],
+      "sources": [
+        "https-jitsi-github-io-handbook-docs-intro",
+        "https-en-wikipedia-org-wiki-jitsi",
+        "https-spec-matrix-org-latest",
+        "https-en-wikipedia-org-wiki-matrix-protocol",
+        "https-jami-net",
+        "https-en-wikipedia-org-wiki-jami-software",
+        "https-docs-livekit-io-telephony",
+        "https-docs-livekit-io-intro-overview",
+        "jitsi-dial-in-numbers-confirm-not-on-the-introduction",
+        "matrix-bridge-implementations-by-name-confirm-the-spec-introduction-names-bridging-and-does-not-",
+        "certification-exams-for-these-projects-confirm-no-exam-page-was-opened"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/call-flow",
+      "title": "A ladder you are allowed to draw",
+      "level": 7,
+      "outcomes": [
+        "SIP sets up the session. RTP carries the media. The webhook tells your app that something happened.",
+        "Twilio's voice docs also name Media Streams and a WebSocket for consuming a real-time stream.",
+        "Bandwidth returns 202 when a message is queued, then a delivered or failed webhook.",
+        "A SIP trunk's private and public domains still apply when the IVR is hosted.",
+        "No customer packet capture was opened. Every ladder in this lab is a teaching sketch."
+      ],
+      "sources": [
+        "https-www-rfc-editor-org-rfc-rfc3261",
+        "https-www-rfc-editor-org-rfc-rfc3550",
+        "https-www-twilio-com-docs-usage-webhooks",
+        "https-www-twilio-com-docs-voice",
+        "https-dev-bandwidth-com-docs-messaging",
+        "https-en-wikipedia-org-wiki-sip-trunking",
+        "a-captured-transfer-ladder-confirm",
+        "twilio-media-streams-message-fields-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/counts-only",
+      "title": "Numbers you may repeat",
+      "level": 9,
+      "outcomes": [
+        "E.164's article states a maximum of fifteen digits.",
+        "The SMS article states up to 160 characters.",
+        "Bandwidth states 3.75 MB uploads, 48-hour file storage, HTTP 202, and a 24-hour webhook retry.",
+        "Plivo's WhatsApp page states USD 1,000 per month in the US data region and ₹1,00,000 per month in the India data region.",
+        "IANA's SIP parameters page shows Last Updated 2026-08-17. That is a registry date, not a call-quality score."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-e-164",
+        "https-en-wikipedia-org-wiki-short-message-service",
+        "https-dev-bandwidth-com-docs-messaging",
+        "https-www-plivo-com-docs-messaging-concepts-whatsapp-prerequisites",
+        "https-www-iana-org-assignments-sip-parameters-sip-parameters-xhtml",
+        "https-developer-vonage-com-en-voice-voice-api-overview",
+        "a-mos-or-g-114-millisecond-budget-confirm",
+        "any-vendor-price-not-in-the-list-above-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/cpaas-word",
+      "title": "What the CPaaS section actually says",
+      "level": 0,
+      "outcomes": [
+        "The Wikipedia article that opened for this name is Platform as a service, and it has a section titled Communications platform as a service.",
+        "That section calls a CPaaS a cloud-based platform that lets developers add real-time communications features, voice, video, and messaging, in their own applications without building the back-end infrastructure and interfaces.",
+        "The same paragraph says these applications are much more sensitive to jitter, latency, and packet loss.",
+        "It also says hosted PBX, cellular networks, and near-real-time applications typically are deployed on CPaaS platforms.",
+        "A vendor price, a port list, and a certification badge are not in that paragraph."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-platform-as-a-service",
+        "a-vendor-neutral-jitter-budget-in-milliseconds-confirm-not-in-the-section-that-opened"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/e164-did",
+      "title": "E.164 numbers and direct inward dial",
+      "level": 2,
+      "outcomes": [
+        "Wikipedia says E.164 is the ITU-T recommendation titled The international public telecommunication numbering plan.",
+        "It says plan-conforming numbers use only digits and a maximum of fifteen digits, with a country code of one to three digits.",
+        "The ITU page that opened lists E.164 (02/26), The international public telecommunication numbering plan, as an in-force component.",
+        "Direct inward dial, on its article, is a service for PBX subscribers: many numbers over trunks, and the dialed number is transmitted so an extension can be reached directly.",
+        "The same article says the dialed number is signaled with DNIS, often in a partial format such as the last four digits."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-e-164",
+        "https-www-itu-int-rec-t-rec-e-164",
+        "https-en-wikipedia-org-wiki-direct-inward-dial",
+        "https-www-rfc-editor-org-rfc-rfc3966",
+        "a-country-s-current-numbering-plan-exception-confirm-not-opened-beyond-the-general-e-164-text"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/e911-words",
+      "title": "E911, the PSAP, and NG911",
+      "level": 5,
+      "outcomes": [
+        "Wikipedia says Enhanced 911 automatically provides the caller's location to 911 dispatchers in North America, and that 911 is the emergency number in that region.",
+        "It says the European Union has a similar system, E112, and that a vehicle call of that kind is called eCall.",
+        "An incoming 911 call goes to a public safety answering point. The PSAP article says that call center receives landline, mobile, and VoIP calls for first responders.",
+        "The E911 article says the dispatcher's computer receives a physical address for landlines or geographic coordinates for wireless.",
+        "Next Generation 911, on its article, aims to update 911 in the United States and Canada so people can send text, images, video, and location to the PSAP. NENA identified the need in 2000, the article says."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-enhanced-911",
+        "https-en-wikipedia-org-wiki-public-safety-answering-point",
+        "https-en-wikipedia-org-wiki-next-generation-9-1-1",
+        "kari-s-law-and-ray-baum-s-act-confirm-wikipedia-titles-returned-http-404",
+        "fcc-pages-confirm-the-call-authentication-url-returned-http-403-and-an-mlts-page-was-not-opened"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/five-platforms",
+      "title": "Bandwidth, Sinch, Telnyx, Infobip, and Bird",
+      "level": 0,
+      "outcomes": [
+        "Wikipedia calls Bandwidth an American CPaaS company that provides APIs for voice calling, text messaging, and emergency services, founded in 1999 and headquartered in Raleigh.",
+        "The Bandwidth home page that opened lists Voice API, Messaging API with SMS, MMS, and RCS, Emergency Calling API, WebRTC API, and Authentication API.",
+        "Wikipedia calls Sinch, formerly CLX Communications, a CPaaS company for messaging, voice, and email, headquartered in Stockholm.",
+        "Wikipedia calls Telnyx a licensed telecommunications carrier, founded in Chicago in 2009 and headquartered in Austin, with tools for voice, text, email, wireless, and real-time AI.",
+        "Infobip's article says the company was founded in Vodnjan in 2006. Bird's docs say email, SMS, and WhatsApp share one platform. A Wikipedia article titled MessageBird returned HTTP 404."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-bandwidth-inc",
+        "https-www-bandwidth-com",
+        "https-en-wikipedia-org-wiki-sinch-ab",
+        "https-en-wikipedia-org-wiki-telnyx",
+        "https-en-wikipedia-org-wiki-infobip",
+        "https-bird-com-docs",
+        "https-developers-messagebird-com",
+        "messagebird-wikipedia-article-confirm-http-404",
+        "a-current-price-for-bandwidth-sinch-telnyx-infobip-or-bird-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/freeswitch-asterisk",
+      "title": "FreeSWITCH and Asterisk",
+      "level": 10,
+      "outcomes": [
+        "Wikipedia says FreeSWITCH is free and open-source telephony software for audio, video, and text, with SIP features, and that it runs on Linux, Windows, macOS, and FreeBSD.",
+        "The article says the latest release is version 1.10, and that SignalWire was founded in 2018 to provide commercial services on an elastic FreeSWITCH core.",
+        "The FreeSWITCH manual that opened says it covers XML configuration, the user directory, SIP profiles, the dialplan, codecs, WebRTC, and integration interfaces.",
+        "Asterisk is the software PBX already cited, and its docs navigation lists Asterisk 18 through 24.",
+        "Asterisk's article says users extend it with dialplan, modules, or AGI programs."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-freeswitch",
+        "https-developer-signalwire-com-freeswitch",
+        "https-en-wikipedia-org-wiki-asterisk-pbx",
+        "https-docs-asterisk-org-about-the-project",
+        "https-docs-asterisk-org-configuration-dialplan",
+        "a-current-freeswitch-tarball-newer-than-the-article-s-1-10-sentence-confirm-before-you-install",
+        "signalwire-prices-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/from-pbx",
+      "title": "Leaving a PBX without inventing a cutover",
+      "level": 10,
+      "outcomes": [
+        "Asterisk's article calls it a software PBX, created in 1999 by Mark Spencer, with voicemail, conferencing, IVR, and automatic call distribution.",
+        "The Asterisk dialplan page says the dialplan is extensions.conf, typically in /etc/asterisk, and that dialplan reload loads it without disrupting service.",
+        "DID and SIP trunking are how the outside world reaches that PBX, on the articles already opened.",
+        "A CPaaS trunk can sit in the public domain while the PBX stays in the private domain.",
+        "No cutover calendar, no dual-run week count, and no CUCM menu were opened."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-asterisk-pbx",
+        "https-docs-asterisk-org-configuration-dialplan",
+        "https-docs-asterisk-org-about-the-project",
+        "https-en-wikipedia-org-wiki-direct-inward-dial",
+        "https-en-wikipedia-org-wiki-sip-trunking",
+        "https-www-twilio-com-docs-sip-trunking-emergency-calling",
+        "https-dev-bandwidth-com-docs-emergency",
+        "cucm-and-ucce-menus-confirm-those-cisco-pages-were-not-opened",
+        "a-dual-run-duration-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/ivr-acd",
+      "title": "Contact center words that stay general",
+      "level": 8,
+      "outcomes": [
+        "The IVR article says an IVR gathers information and routes calls, and that an ACD and an automated attendant are separate systems it is often combined with.",
+        "A contact center, in ordinary speech, is broader than one vendor's queue. This lab does not invent a handle-time formula.",
+        "Twilio's voice navigation names an inbound call center use case, Queue, and TaskRouter on the docs home.",
+        "TaskRouter's field list was not opened.",
+        "Bandwidth's home page names a Salesforce Contact Center integration. The field map was not opened."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-interactive-voice-response",
+        "https-www-twilio-com-docs-voice",
+        "https-www-twilio-com-docs",
+        "https-www-bandwidth-com",
+        "taskrouter-attributes-confirm",
+        "salesforce-field-mapping-confirm",
+        "service-level-formulas-confirm-not-opened"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/kamailio-proxy",
+      "title": "Kamailio is a SIP server",
+      "level": 10,
+      "outcomes": [
+        "Wikipedia says Kamailio, formerly OpenSER, is a GPL-licensed SIP server that can be a registrar, proxy, or redirect server.",
+        "The feature list includes a SIP security firewall, least-cost routing, IMS and VoLTE, a SIP-WebRTC gateway, and MSRP relay.",
+        "The article says a large public deployment, with several million users, is at the German ISP 1&1, and another is at sipgate.",
+        "The documentation page links module docs for series including 6.0.x and 6.1.x, and older series.",
+        "The wiki says its front page links documents for latest stable versions, 5.2 or newer, and points older releases elsewhere."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-kamailio",
+        "https-www-kamailio-org-w-documentation",
+        "https-www-kamailio-org-wikidocs",
+        "https-www-rfc-editor-org-rfc-rfc3261",
+        "https-www-rfc-editor-org-rfc-rfc3550",
+        "opensips-current-documentation-confirm-not-opened",
+        "a-least-cost-rate-table-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/legacy-names",
+      "title": "Avaya, UCCE, and the pages that did not open",
+      "level": 10,
+      "outcomes": [
+        "The UC Lab Free University opened on this organization's site. Its own pages study CUCM-shaped systems.",
+        "This CPaaS session did not open Cisco CUCM or UCCE documentation. Those menus stay confirm.",
+        "Avaya product pages were not opened in this session either. Aura and Infinity stay confirm here.",
+        "Bandwidth's integration list does name Zoom Phone, Webex Calling, Genesys Cloud CX, and Five9. Those names opened.",
+        "The Zoom, Talkdesk, and Avaya sibling lab URL returned HTTP 404 in October 2026, so it is not linked."
+      ],
+      "sources": [
+        "https-cyphermonkeylabs-com-uc-lab-free-university-mesmerizing",
+        "https-www-bandwidth-com",
+        "https-en-wikipedia-org-wiki-sip-trunking",
+        "cisco-cucm-and-ucce-pages-confirm",
+        "avaya-aura-and-infinity-pages-confirm",
+        "zoom-talkdesk-and-avaya-sibling-lab-confirm-http-404"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/message-verify",
+      "title": "Messaging and verify",
+      "level": 6,
+      "outcomes": [
+        "Vonage's Messages API page says it integrates with SMS, MMS, RCS, WhatsApp, Messenger, Viber, and email.",
+        "Vonage's Verify page calls Verify a two-factor authentication product and lists channels including SMS, voice, email, WhatsApp, and Silent Authentication.",
+        "Twilio's Verify navigation lists SMS, RCS, WhatsApp, Push, TOTP, and Silent Network Auth.",
+        "Infobip's docs hub shows a JSON sample with messages, destinations, from, and text, and the navigation includes Verify users.",
+        "MessageBird's developer site opened with SMS and voice quickstarts, including make a call and receive calls."
+      ],
+      "sources": [
+        "https-developer-vonage-com-en-messages-overview",
+        "https-developer-vonage-com-en-verify-overview",
+        "https-www-twilio-com-docs-verify",
+        "https-www-infobip-com-docs",
+        "https-developers-messagebird-com",
+        "verify-price-per-channel-confirm-vonage-says-see-pricing-the-table-was-not-opened",
+        "infobip-roadmap-dates-confirm-the-nav-label-opened-the-dates-did-not"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/mms-media",
+      "title": "MMS and the media a page will store",
+      "level": 3,
+      "outcomes": [
+        "Wikipedia says MMS sends multimedia content to and from a mobile phone and extends SMS so messages can be longer than 160 characters.",
+        "The article says MMS can deliver up to forty seconds of video, one image, a slideshow, or audio.",
+        "Bandwidth's messaging guide says the API sends SMS and MMS over HTTP, and that an MMS segment count is always 1.",
+        "The same guide says you can upload files up to 3.75 MB, storage is described as free, and files are stored for up to 48 hours.",
+        "It also says Bandwidth does not store text message content after the webhook is delivered, only metadata."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-multimedia-messaging-service",
+        "https-dev-bandwidth-com-docs-messaging",
+        "https-en-wikipedia-org-wiki-short-message-service",
+        "mms-size-limits-for-twilio-vonage-sinch-telnyx-plivo-infobip-or-bird-confirm-not-opened-as-a-num"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/no-secrets",
+      "title": "Compliance starts by not pasting a secret",
+      "level": 10,
+      "outcomes": [
+        "Twilio's webhook docs name signing with shared keys, and the security page opened with the title Security.",
+        "The Telnyx guide uses a Bearer API key and tells you to copy it from API Keys. The key is not in this repository.",
+        "Bandwidth does not store message text, on the messaging guide. Your own logs might. Do not put a customer's message in a study note.",
+        "The Twilio article records data breaches in 2022 and 2024. That is a history sentence, not a hardening guide.",
+        "Certificate names, a SOC report, and a HIPAA opinion were not read."
+      ],
+      "sources": [
+        "https-www-twilio-com-docs-usage-webhooks",
+        "https-www-twilio-com-docs-usage-security",
+        "https-developers-telnyx-com-docs-messaging-messages-send-message",
+        "https-dev-bandwidth-com-docs-messaging",
+        "https-en-wikipedia-org-wiki-twilio",
+        "https-www-twilio-com-docs-voice-twiml",
+        "https-jami-net",
+        "iso-soc-hipaa-or-pci-certificate-identifiers-confirm-not-read",
+        "call-recording-statutes-confirm-not-legal-advice"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/number-habit",
+      "title": "How a guide tells you to get a number",
+      "level": 2,
+      "outcomes": [
+        "Telnyx's first-message guide says to buy two numbers so you can test messaging between them without registration requirements.",
+        "The guide's steps name Numbers, then Search and Buy, an area code or region, and an SMS feature check.",
+        "It then says to add a messaging profile and assign that profile to each number.",
+        "The send call in the guide is an HTTP POST to https://api.telnyx.com/v2/messages with a Bearer token.",
+        "The JSON fields the guide shows are from, to, and text. The sample digits in the guide are placeholders, not a number this lab assigns."
+      ],
+      "sources": [
+        "https-developers-telnyx-com-docs-messaging-messages-send-message",
+        "https-dev-bandwidth-com-docs-messaging",
+        "https-en-wikipedia-org-wiki-e-164",
+        "telnyx-or-bandwidth-monthly-number-price-confirm-not-on-the-guides-that-opened"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/observability",
+      "title": "What observability meant on the pages",
+      "level": 9,
+      "outcomes": [
+        "LiveKit Cloud's agents page says observability there includes transcripts and traces.",
+        "Twilio's voice navigation names Voice Insights, Call Summary, and Trust and Engagement Insights.",
+        "Twilio's docs also name a Debugger and usage records on the general usage pages reached from the webhook introduction.",
+        "Bandwidth says it stores message metadata, not the text, after the webhook succeeds.",
+        "No page opened in this session defined a numeric service level or a jitter budget."
+      ],
+      "sources": [
+        "https-docs-livekit-io-agents",
+        "https-www-twilio-com-docs-voice",
+        "https-www-twilio-com-docs-usage-webhooks",
+        "https-dev-bandwidth-com-docs-messaging",
+        "voice-insights-metric-definitions-confirm",
+        "a-jitter-or-mos-threshold-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/offer-answer",
+      "title": "Offer, answer, and SDP",
+      "level": 1,
+      "outcomes": [
+        "RFC 3264 is titled An Offer/Answer Model with the Session Description Protocol (SDP).",
+        "RFC 8866 defines SDP for describing multimedia sessions for announcement, invitation, and other initiation. The page says this document obsoletes RFC 4566.",
+        "Wikipedia's SIP article says media type and parameter negotiation and media setup are performed with SDP.",
+        "RFC 3966 specifies the tel URI for telephone numbers.",
+        "RFC 4733 is the RTP payload for DTMF digits, telephony tones, and telephony signals, and it obsoletes RFC 2833."
+      ],
+      "sources": [
+        "https-www-rfc-editor-org-rfc-rfc3264",
+        "https-www-rfc-editor-org-rfc-rfc8866",
+        "https-en-wikipedia-org-wiki-session-initiation-protocol",
+        "https-www-rfc-editor-org-rfc-rfc3966",
+        "https-www-rfc-editor-org-rfc-rfc4733",
+        "a-codec-price-list-confirm-none-of-these-rfcs-is-a-tariff"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/open-bridges",
+      "title": "Bridges the open pages actually name",
+      "level": 8,
+      "outcomes": [
+        "Kamailio's Wikipedia article lists a SIP-WebRTC gateway among its features, and says Kamailio can be a registrar, proxy, or redirect server.",
+        "Matrix's specification says it is a set of open APIs for decentralised communication, including IM, VoIP signalling, and bridging existing silos.",
+        "Jami's site says Jami can also function as a SIP client, and the Wikipedia article says it is SIP-compatible.",
+        "Bandwidth's home page lists Microsoft Teams Direct Routing, Operator Connect, Genesys Cloud CX, Webex Calling, Zoom Phone, Google Voice SIP Link, and Five9.",
+        "A named customer quote for any of those integrations was not opened."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-kamailio",
+        "https-spec-matrix-org-latest",
+        "https-jami-net",
+        "https-en-wikipedia-org-wiki-jami-software",
+        "https-www-bandwidth-com",
+        "customer-quotes-and-field-maps-for-the-named-integrations-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/plivo-commitment",
+      "title": "One Plivo number that really was on the page",
+      "level": 6,
+      "outcomes": [
+        "Plivo's docs home says the guides cover Voice, Messaging, SIP Trunking, and Voice AI.",
+        "The same home page says you can connect voice AI agents built on platforms such as LiveKit, ElevenLabs, and Vapi to the phone network with Plivo SIP trunking.",
+        "The WhatsApp prerequisites page says WhatsApp is not enabled by default.",
+        "It states a Minimum Monthly Commitment of USD 1,000 per month in the US data region, or ₹1,00,000 per month in the India data region, for WhatsApp access.",
+        "It also says that effective 1 November 2026 Plivo applies a platform fee for WhatsApp messages, and that the fee amounts are on a pricing page this session did not open."
+      ],
+      "sources": [
+        "https-www-plivo-com-docs",
+        "https-www-plivo-com-docs-messaging-concepts-whatsapp-prerequisites",
+        "plivo-whatsapp-platform-fee-amounts-confirm",
+        "plivo-voice-and-sms-prices-confirm-not-on-the-pages-that-were-read"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/price-confirm",
+      "title": "Prices that stay confirm",
+      "level": 9,
+      "outcomes": [
+        "Vonage's voice, messages, and verify pages say see pricing. The price tables were not opened.",
+        "Telnyx's SIP overview names a daily spend limit and does not state the number in the text that opened.",
+        "Twilio's docs home lists a Pricing label. No Twilio price figure was read.",
+        "Plivo's WhatsApp commitment is the exception already recorded. Other Plivo prices were not read.",
+        "Sinch's SMS page says communications can be cost-efficient. That is not a number."
+      ],
+      "sources": [
+        "https-developer-vonage-com-en-voice-voice-api-overview",
+        "https-developer-vonage-com-en-messages-overview",
+        "https-developer-vonage-com-en-verify-overview",
+        "https-developers-telnyx-com-docs-voice-sip-trunking-get-started",
+        "https-www-twilio-com-docs",
+        "https-developers-sinch-com-docs-sms-overview",
+        "https-www-plivo-com-docs-messaging-concepts-whatsapp-prerequisites",
+        "twilio-vonage-telnyx-sinch-bandwidth-infobip-and-bird-price-tables-confirm",
+        "telnyx-daily-spend-amount-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/rtp-webrtc",
+      "title": "RTP, SRTP, and WebRTC",
+      "level": 1,
+      "outcomes": [
+        "Wikipedia says RTP delivers audio and video over IP, typically over UDP, and that RTCP monitors transmission statistics and quality of service.",
+        "The same article says RFC 3550 in 2003 superseded RFC 1889, and that RTP is often used with a signaling protocol such as SIP.",
+        "RFC 3711 is the Secure Real-time Transport Protocol, SRTP.",
+        "RFC 8825 is an overview of real-time protocols for browser-based applications. The abstract says the document is an applicability statement and does not itself specify a protocol.",
+        "Wikipedia says WebRTC lets audio and video work inside web pages by direct peer-to-peer communication, and that ICE, STUN, and TURN are the NAT traversal techniques it uses."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-real-time-transport-protocol",
+        "https-www-rfc-editor-org-rfc-rfc3550",
+        "https-www-rfc-editor-org-rfc-rfc3711",
+        "https-www-rfc-editor-org-rfc-rfc8825",
+        "https-en-wikipedia-org-wiki-webrtc",
+        "ice-stun-or-turn-port-numbers-confirm-the-names-are-on-the-webrtc-article-their-rfcs-were-not-op"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/shaken-token",
+      "title": "SHAKEN, PASSporT, and the Identity header",
+      "level": 4,
+      "outcomes": [
+        "The Wikipedia article says SHAKEN stands for Signature-based Handling of Asserted information using toKENs.",
+        "It says SHAKEN was developed by the SIP Forum and ATIS to implement STIR, and that STIR is designed for calls routed through VoIP rather than the SS7 telephone network.",
+        "The article says a STIR system produces a token with the originating number, the called number, and the attestation level, and that this is appended to the SIP request in an Identity field.",
+        "RFC 8225 defines PASSporT, a Personal Assertion Token that cryptographically verifies an originating identity.",
+        "RFC 8224 defines authenticated identity management in SIP and says the baseline SIP security mechanisms are inadequate for assuring end-user identity in an interdomain context. The page says it obsoletes RFC 4474."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-stir-shaken",
+        "https-www-rfc-editor-org-rfc-rfc8225",
+        "https-www-rfc-editor-org-rfc-rfc8224",
+        "https-en-wikipedia-org-wiki-sip-trunking",
+        "fcc-call-authentication-page-confirm-the-request-returned-http-403",
+        "the-exact-base64-details-beyond-the-article-s-summary-confirm-if-you-need-a-byte-layout-read-rfc"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/sip-jobs",
+      "title": "What SIP is for",
+      "level": 1,
+      "outcomes": [
+        "Wikipedia says SIP initiates, maintains, modifies, and terminates communication sessions that involve voice, video, and messaging.",
+        "It says SIP is text-based and incorporates elements of HTTP and SMTP, and that a call may have multiple media streams.",
+        "It also says media type and setup are performed with the Session Description Protocol, and that SIP works with other protocols that carry the media.",
+        "RFC 3261, opened as SIP: Session Initiation Protocol, is the standards-track specification. The page notes that it obsoletes RFC 2543.",
+        "IANA's SIP parameters page says header field names are case-insensitive and points at RFC 3261. The page shows Last Updated 2026-08-17."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-session-initiation-protocol",
+        "https-www-rfc-editor-org-rfc-rfc3261",
+        "https-www-iana-org-assignments-sip-parameters-sip-parameters-xhtml",
+        "https-www-rfc-editor-org-rfc-rfc7092",
+        "a-vendor-s-private-sip-header-list-confirm-iana-says-standard-headers-must-not-begin-with-p-and-"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/sms-160",
+      "title": "SMS, and the 160-character line",
+      "level": 3,
+      "outcomes": [
+        "Wikipedia says SMS is a text messaging service that lets mobile phones exchange short text messages, typically over cellular networks.",
+        "It says messages are up to 160 characters, originally for GSM, and that gateways can carry them through an SMSC.",
+        "The article says MMS was later introduced as an upgrade with picture messaging.",
+        "Sinch's SMS overview says you can send and receive SMS, including bulk SMS, and it names the Conversation API, the SMS REST API, and Enhanced SMPP.",
+        "The Conversation API section says the same API can also send RCS, WhatsApp, Viber Business, and Facebook Messenger, and that hosting locations named there are US East and EU Ireland."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-short-message-service",
+        "https-developers-sinch-com-docs-sms-overview",
+        "https-dev-bandwidth-com-docs-messaging",
+        "https-bird-com-docs",
+        "bandwidth-s-exact-character-limits-confirm-the-messaging-guide-points-at-another-page-that-was-n"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/stir-letters",
+      "title": "A, B, and C on the STIR article",
+      "level": 4,
+      "outcomes": [
+        "Wikipedia says STIR/SHAKEN is a suite of protocols and procedures intended to combat caller ID spoofing.",
+        "It says STIR is Secure Telephone Identity Revisited, defined in IETF RFCs, and that it adds a digital certificate to the SIP information used to route VoIP calls.",
+        "The article says there are three attestation levels. A, Full Attestation, means the provider recognizes the entire phone number as registered to the originating subscriber.",
+        "B, Partial Attestation, means the call came from a known customer but the entire number cannot be verified, as with a PBX extension the provider has not registered.",
+        "C, Gateway Attestation, means the call can only be verified as coming from a known gateway, for example a connection from another provider."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-stir-shaken",
+        "https-en-wikipedia-org-wiki-caller-id",
+        "https-www-rfc-editor-org-rfc-rfc8224",
+        "a-country-s-legal-penalty-for-a-failed-attestation-confirm-enforcement-pages-were-not-opened-as-"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/ten-dlc",
+      "title": "10DLC is a name on the compliance pages",
+      "level": 3,
+      "outcomes": [
+        "Twilio's compliance page that opened is titled Programmable Messaging and A2P 10DLC.",
+        "The navigation names BrandRegistrations, Vettings, Usa2p, and Usecases, and it names registration paths for Standard, Low-Volume Standard, and Sole Proprietor brands.",
+        "It also names campaigns, including externally registered campaigns and mock brands and campaigns.",
+        "Sinch's developer navigation includes a 10DLC Brand and Campaign Registration API next to the Numbers API.",
+        "This session did not open a paragraph that expands the letters 10DLC or states a fee or a throughput number."
+      ],
+      "sources": [
+        "https-www-twilio-com-docs-messaging-compliance-a2p-10dlc",
+        "https-developers-sinch-com-docs-sms-overview",
+        "https-developers-sinch-com",
+        "https-en-wikipedia-org-wiki-short-code",
+        "https-developers-telnyx-com-docs-messaging-messages-send-message",
+        "the-expansion-of-10dlc-throughput-limits-and-registration-fees-confirm-not-read-as-prose-on-the-"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/trunk-domains",
+      "title": "Two domains and a SIP trunk",
+      "level": 2,
+      "outcomes": [
+        "Wikipedia says SIP trunking is how Internet telephony service providers deliver telephone services to customers with a SIP-based IP-PBX.",
+        "The article splits the network into a private domain, connected to a PBX or unified communications server, and a public domain, toward the PSTN or PLMN.",
+        "It says the interconnection between those domains must occur through a SIP trunk.",
+        "Twilio's Elastic SIP Trunking docs opened, including emergency calling, codecs, and calls per second as page names.",
+        "Telnyx's SIP trunking guide says inbound traffic and authentication use SIP connections, and outbound routing uses outbound voice profiles."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-sip-trunking",
+        "https-www-twilio-com-docs-sip-trunking",
+        "https-developers-telnyx-com-docs-voice-sip-trunking-get-started",
+        "https-www-rfc-editor-org-rfc-rfc7092",
+        "telnyx-signaling-addresses-media-ranges-and-ports-confirm-the-guide-points-at-sip-telnyx-com-whi",
+        "twilio-calls-per-second-numeric-limit-confirm-the-page-name-opened-the-number-did-not"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/twilio-emergency",
+      "title": "Twilio's emergency calling page",
+      "level": 5,
+      "outcomes": [
+        "Twilio's SIP trunking emergency page says the feature routes emergency calls to PSAPs in the US, Canada, the UK, Australia, Ireland, France, Germany, and Austria.",
+        "In the US and Canada it says Twilio supports both Enhanced 911 and Basic 911.",
+        "E911, on that page, routes to the PSAP for the address associated with the Twilio number and includes the number and the address for the dispatcher.",
+        "Basic 911 routes to the PSAP for that address, and the dispatcher does not receive the number or address unless the caller speaks them.",
+        "The page says some Twilio numbers have neither service, and those 911 calls go to a national emergency call center. A Programmable Voice emergency page also opened."
+      ],
+      "sources": [
+        "https-www-twilio-com-docs-sip-trunking-emergency-calling",
+        "https-www-twilio-com-docs-voice-tutorials-emergency-calling-for-programmable-voice",
+        "https-en-wikipedia-org-wiki-enhanced-911",
+        "https-en-wikipedia-org-wiki-public-safety-answering-point",
+        "emergency-behavior-for-a-twilio-number-outside-the-countries-named-on-the-page-confirm",
+        "programmable-voice-emergency-click-path-confirm-the-page-opened-the-steps-were-not-copied-beyond"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/twilio-vonage",
+      "title": "Twilio and Vonage, from the articles",
+      "level": 0,
+      "outcomes": [
+        "Wikipedia calls Twilio an American cloud communications company based in San Francisco that provides programmable tools for phone calls, text messages, and other functions using web service APIs.",
+        "The same article says Twilio was founded in 2008, launched Twilio Voice on 20 November 2008, and released its text messaging API in February 2010.",
+        "It also says Twilio acquired Authy and SendGrid, and was subject to data breaches in 2022 and 2024.",
+        "Wikipedia calls Vonage an American cloud communications provider operating as a subsidiary of Ericsson, founded in 1998 as Min-X and renamed in 2001.",
+        "The Vonage article says the offering includes unified communications, contact center applications, and communications APIs, and that Ericsson completed the acquisition in July 2022."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-twilio",
+        "https-en-wikipedia-org-wiki-vonage",
+        "https-developer-vonage-com-en-home",
+        "a-current-twilio-or-vonage-retail-price-confirm-not-on-the-articles-or-the-developer-home-that-o"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/twiml-ivr",
+      "title": "TwiML verbs and what an IVR is",
+      "level": 7,
+      "outcomes": [
+        "Wikipedia says an IVR interacts with callers, gathers information, and routes calls, using speech recognition and DTMF from the keypad.",
+        "The article says IVR is often combined with an automated attendant and an automatic call distributor.",
+        "Twilio's TwiML page lists voice nouns and verbs including Say, Play, Gather, Dial, Conference, Queue, Record, Redirect, Hangup, Pause, Pay, Refer, Reject, and Sip.",
+        "The voice navigation also names Build IVR phone trees and a VirtualAgent noun.",
+        "RFC 4733 is still the RTP payload for the keypad digits. Gather is Twilio's verb. They are not the same document."
+      ],
+      "sources": [
+        "https-en-wikipedia-org-wiki-interactive-voice-response",
+        "https-www-twilio-com-docs-voice-twiml",
+        "https-www-twilio-com-docs-voice",
+        "https-www-rfc-editor-org-rfc-rfc4733",
+        "https-developer-vonage-com-en-voice-voice-api-overview",
+        "vonage-ncco-verb-list-confirm-the-voice-page-names-an-ncco-reference-that-reference-was-not-open",
+        "a-twiml-pay-price-confirm"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/vendor-attest",
+      "title": "Where the vendors put the same words",
+      "level": 4,
+      "outcomes": [
+        "Twilio's voice docs include a page titled Trusted calling with SHAKEN/STIR, and the voice navigation lists SHAKEN/STIR overview and onboarding beside Voice Integrity.",
+        "Bandwidth's voice page says its STIR/SHAKEN APIs are for managing regulatory compliance, in the sentence that opened.",
+        "The same Bandwidth page says a per-query service provides the caller name on VoIP calls in the United States and Canada.",
+        "No attestation fee, no letter-to-price table, and no certificate bundle were read on those pages.",
+        "Caller ID spoofing remains the problem the Wikipedia article names. A vendor menu does not replace the A, B, and C definitions."
+      ],
+      "sources": [
+        "https-www-twilio-com-docs-voice-trusted-calling-with-shakenstir",
+        "https-www-twilio-com-docs-voice",
+        "https-dev-bandwidth-com-docs-voice",
+        "https-en-wikipedia-org-wiki-stir-shaken",
+        "https-en-wikipedia-org-wiki-caller-id",
+        "twilio-shaken-onboarding-steps-and-any-signing-fee-confirm",
+        "bandwidth-stir-api-parameters-confirm-the-voice-page-named-the-apis-and-did-not-list-the-fields"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/voice-video",
+      "title": "Voice and video names that opened",
+      "level": 6,
+      "outcomes": [
+        "Twilio's docs home lists Programmable Voice, Programmable Messaging, Verify, Video, Elastic SIP Trunking, and Conversations among its products.",
+        "The Programmable Voice navigation names outbound calls, incoming calls, gather, conference, IVR phone trees, media streams, and emergency calling.",
+        "Twilio Video's docs opened with quickstarts named for JavaScript, Android, and iOS, and with Video Room concepts.",
+        "Vonage's developer home lists Voice, Video, and Messaging as communication APIs, and the Voice page says text to speech covers over 50+ languages.",
+        "Bandwidth's voice page says you can build a calling application over an HTTPS interface to its voice network."
+      ],
+      "sources": [
+        "https-www-twilio-com-docs",
+        "https-www-twilio-com-docs-voice",
+        "https-www-twilio-com-docs-video",
+        "https-developer-vonage-com-en-home",
+        "https-developer-vonage-com-en-voice-voice-api-overview",
+        "https-dev-bandwidth-com-docs-voice",
+        "vonage-video-api-details-beyond-the-navigation-label-confirm",
+        "twilio-video-room-size-limits-confirm-not-read"
+      ],
+      "last_verified": null
+    },
+    {
+      "key": "rooms/webhook-direction",
+      "title": "Webhooks come inbound",
+      "level": 7,
+      "outcomes": [
+        "Twilio's webhook introduction says Twilio uses webhooks to notify your web app when events such as incoming calls or SMS messages occur.",
+        "It says the REST API handles requests from your app to Twilio, and webhooks handle the reverse, requests from Twilio to your app.",
+        "The same docs area names signing webhooks with shared keys, and authentication with OAuth 2.0, Basic, or Digest.",
+        "Bandwidth's messaging guide says a create call returns HTTP 202 Accepted, meaning the message is queued.",
+        "Bandwidth says it retries a webhook for 24 hours until your server returns an HTTP 2xx, and then it stops."
+      ],
+      "sources": [
+        "https-www-twilio-com-docs-usage-webhooks",
+        "https-dev-bandwidth-com-docs-messaging",
+        "https-www-twilio-com-docs-usage-security",
+        "twilio-s-webhook-retry-schedule-confirm-not-copied-from-the-introduction",
+        "the-list-of-iso-certificates-on-the-twilio-security-page-confirm-the-page-title-opened-the-certi"
+      ],
+      "last_verified": null
+    }
+  ]
+}
