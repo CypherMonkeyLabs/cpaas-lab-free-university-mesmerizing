@@ -312,7 +312,30 @@ function injection(raw) {
 
 const AMBIGUOUS = new Set("set list time key name file type open read match pass break call run end add new get use make home world page level course value data text line number item code help start show play count group say says said want need look come take give know think tell tell".split(" "));
 const STRONG_WORDS = new Set("cpaas sip sdp rtp rtcp webrtc ice stun turn dtls srtp dtmf invite bye ack cancel register refer options subscribe notify prack update info digest nonce realm twilio vonage bandwidth sinch telnyx plivo infobip bird messagebird freeswitch asterisk kamailio livekit jitsi matrix jami webhook ivr acd sms mms dlc 10dlc shaken stir e911 e164 did trunk codec pstn voip siprec attestation origination termination twiml ncco gather dial queue agent signaling offer answer candidate programmable lookup verify otp carrier gateway registrar proxy dialog transaction conference recording emergency psap ani callback location campaign brand shortcode longcode segment concatenation media websocket ladder trunking observability jitter latency packet lookup alphanumeric unicode smil bridged bridge jingle sips tls srtp".split(" "));
+const WORLD_WORDS = new Set("capital france germany austria ireland australia canada mexico brazil india japan china spain italy netherlands belgium sweden norway denmark finland poland portugal greece switzerland zealand singapore paris london berlin rome madrid vienna lisbon brussels amsterdam stockholm oslo copenhagen helsinki warsaw athens dublin sydney melbourne toronto vancouver tokyo beijing delhi mumbai moscow kyiv ukraine russia korea argentina chile peru egypt nigeria kenya morocco turkey istanbul dubai qatar planet galaxy dinosaur football soccer basketball baseball olympics pizza president population weather movie poem hiking restaurant french german italian continent ocean mountain river island islands geography history".split(" "));
 const GENERIC_ENGLISH = new Set("time life home world page course help start people person spanish tokyo poem sea thank thanks meaning telephone calorie calories banana capital hiking restaurant population colour color breakfast winter rainfall lullaby haiku mango egg moon landing movie pizza weather flight story dragon cricket tire cake president bitcoin joke french goodbye server program mail email configure configuration article python javascript node decorator docker kubernetes postgres recipe headphone headphones bluetooth smtp cake".split(" "));
+WORLD_WORDS.forEach((word) => GENERIC_ENGLISH.add(word));
+
+function hasCuratedTerm(text, syn, pool, freq) {
+  const parts = normalize(text).split(" ").filter((word) => word && !STOP.has(word) && !FILLER.has(word));
+  for (const word of parts) {
+    if (WORLD_WORDS.has(word) || GENERIC_ENGLISH.has(word)) continue;
+    const forms = [word, stem(word)];
+    const canonical = canon(word, syn);
+    if (canonical) forms.push(canonical);
+    if (forms.some((form) => STRONG_WORDS.has(form))) return true;
+    const fix = fuzzy(word, [...STRONG_WORDS], word.length >= 7 ? 2 : 1, freq);
+    if (fix && STRONG_WORDS.has(fix) && sharedPrefix(word, fix) >= 2) return true;
+  }
+  return false;
+}
+
+function offTopicWithoutCpaas(text, syn, pool, freq) {
+  const parts = normalize(text).split(" ").filter((word) => word && word.length >= 3 && !STOP.has(word) && !FILLER.has(word));
+  const worldly = parts.some((word) => WORLD_WORDS.has(word));
+  if (!worldly) return false;
+  return !hasCuratedTerm(text, syn, pool, freq);
+}
 
 function buildDomain(df, seeds) {
   const strong = new Set(STRONG_WORDS);
@@ -1040,13 +1063,33 @@ export function createRetriever(index) {
     return best;
   }
 
+  function docHas(doc, term) {
+    if (!doc || !term) return false;
+    return doc.tf.has(term) || doc.ttf.has(term);
+  }
+
+  function uncited(raw, doc) {
+    if (!doc) return false;
+    const q = normalize(raw);
+    const gaps = [
+      { re: /\breceipts?\b/, terms: ["receipt"] },
+      { re: /\bporting\b|\bported\b|\bports\b|\bport\b/, terms: ["port", "porting", "ported"] },
+    ];
+    return gaps.some((gap) => gap.re.test(q) && !gap.terms.some((term) => docHas(doc, term)));
+  }
+
   function ask(raw, host) {
     const limited = String(raw || "").slice(0, 400);
     const routed = route(limited, host || {});
     if (!routed.searchText) return routed;
+    if (offTopicWithoutCpaas(routed.searchText, syn, pool, freq)) return fallbackAnswer([], routed.followMode, true);
     if (!hasDomainTerm(routed.searchText, domain, syn, pool, freq)) return fallbackAnswer([], routed.followMode, true);
     const seed = matchSeed(routed.searchText);
-    if (seed) return fromSeed(seed, limited);
+    if (seed) {
+      const seeded = docs.find((doc) => doc.i === seed.i);
+      if (uncited(limited, seeded)) return fallbackAnswer([], routed.followMode, true);
+      return fromSeed(seed, limited);
+    }
     const qTerms = queryTokens(routed.searchText, syn, pool, knownSet, seedPool, freq);
     const indexed = qTerms.filter((term) => df.has(term));
     const topical = indexed.filter((term) => !/^\d+$/.test(term));
@@ -1059,6 +1102,7 @@ export function createRetriever(index) {
     const topDoc = top ? docs.find((doc) => doc.i === top.id) : null;
     const nq = normalize(routed.searchText);
     if (!isConfident(top, second, qTerms, topDoc, nq)) return fallbackAnswer(hits, routed.followMode);
+    if (uncited(limited, topDoc)) return fallbackAnswer([], routed.followMode, true);
     const follow = topDoc.eg
       ? "Show an example"
       : (second && second.href !== top.href ? `What about ${second.title}?` : (topDoc.fu || "Where do I start?"));

@@ -103,22 +103,33 @@
     });
     return guard;
   }
+  function shortSheet() { return window.matchMedia("(max-height: 520px)").matches; }
   function openPanel(flag) {
     panel.hidden = !flag;
     dock.classList.toggle("is-open", !!flag);
+    document.body.classList.toggle("guide-open", !!flag);
     monkey.setAttribute("aria-expanded", flag ? "true" : "false");
     if (flag) pose("cheer");
     if (flag && isPhone()) {
-      var phone = document.querySelector(".phone-bar");
-      var phoneTop = phone ? phone.getBoundingClientRect().top : window.innerHeight;
-      var topLimit = Math.round(guardBottom() + 12);
-      var maxH = Math.max(140, phoneTop - 12 - topLimit);
-      panel.style.maxHeight = maxH + "px";
-      dock.style.maxHeight = maxH + "px";
-      dock.style.top = topLimit + "px";
-      dock.style.bottom = "auto";
       dock.style.left = "8px";
       dock.style.right = "8px";
+      if (shortSheet()) {
+        panel.style.maxHeight = "none";
+        dock.style.maxHeight = "none";
+        dock.style.top = "8px";
+        dock.style.bottom = "8px";
+      } else {
+        var phone = document.querySelector(".phone-bar");
+        var phoneTop = phone ? phone.getBoundingClientRect().top : window.innerHeight;
+        var topLimit = Math.round(guardBottom() + 12);
+        var maxH = Math.max(180, phoneTop - 12 - topLimit);
+        panel.style.maxHeight = maxH + "px";
+        dock.style.maxHeight = maxH + "px";
+        dock.style.top = topLimit + "px";
+        dock.style.bottom = "auto";
+      }
+      var field = dock.querySelector("#py-chat-input");
+      if (field && typeof field.scrollIntoView === "function") field.scrollIntoView({ block: "nearest" });
     } else {
       clearPhoneSheet();
     }

@@ -66,6 +66,43 @@ test("offline lesson and chat", async ({ page, context }) => {
   await expect(page.locator(".py-msg-bot").last()).toContainText(/SIP/);
 });
 
+test.describe("short phone", () => {
+  test.use({ viewport: { width: 390, height: 430 } });
+  test("chat input stays above the dock", async ({ page }) => {
+    await quiet(page);
+    await page.goto("/index.html");
+    await page.locator("[data-open-guide]").click();
+    const input = page.locator("#py-chat-input");
+    const send = page.locator(".py-chat-form button[type=submit]");
+    await expect(input).toBeVisible();
+    await expect(send).toBeVisible();
+    await expect(page.locator(".phone-bar")).toBeHidden();
+    const covered = await page.evaluate(() => {
+      function hit(el) {
+        const box = el.getBoundingClientRect();
+        const x = Math.min(window.innerWidth - 2, Math.max(2, box.left + box.width / 2));
+        const y = Math.min(window.innerHeight - 2, Math.max(2, box.top + box.height / 2));
+        const top = document.elementFromPoint(x, y);
+        const inView = box.top >= 0 && box.bottom <= window.innerHeight && box.left >= 0 && box.right <= window.innerWidth;
+        return { inView, covered: !(top === el || el.contains(top)), tag: top ? top.tagName : "" };
+      }
+      return {
+        input: hit(document.querySelector("#py-chat-input")),
+        send: hit(document.querySelector(".py-chat-form button[type=submit]")),
+      };
+    });
+    expect(covered.input.inView).toBe(true);
+    expect(covered.send.inView).toBe(true);
+    expect(covered.input.covered).toBe(false);
+    expect(covered.send.covered).toBe(false);
+    await input.fill("what is SIP");
+    await send.click();
+    await expect(page.locator(".py-msg-bot").last()).toContainText(/SIP/);
+    await expect(input).toBeVisible();
+    await shot(page, "bot-390x430.png");
+  });
+});
+
 test("simulator labels itself", async ({ page }) => {
   await quiet(page);
   await page.goto("/play.html");

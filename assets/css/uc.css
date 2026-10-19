@@ -736,6 +736,52 @@ main, .wrap, .go-deeper, .lede, .go-deeper a, .go-deeper li {
   .bot-dock.is-open .sheet-handle { min-height: 44px; justify-content: flex-start; padding-left: 12px; }
   .bot-dock:not(.is-open) .bot-panel { display: none; }
   .sheet-handle { display: flex; }
+  body.guide-open .phone-bar { display: none; }
+}
+@media (max-height: 520px) {
+  body.guide-open .bot-dock.is-open {
+    top: 8px;
+    bottom: 8px;
+    max-height: none;
+    overflow: hidden;
+  }
+  body.guide-open .bot-dock.is-open .monkey-btn,
+  body.guide-open .bot-disclaimer,
+  body.guide-open .choice-row,
+  body.guide-open .bot-log,
+  body.guide-open .voice-pick,
+  body.guide-open .bot-extras,
+  body.guide-open .py-chat-beta,
+  body.guide-open .py-chat-try,
+  body.guide-open .py-chat-examples,
+  body.guide-open .py-chat-chips {
+    display: none;
+  }
+  body.guide-open .bot-dock.is-open .bot-panel {
+    display: flex;
+    flex-direction: column;
+    max-height: calc(100dvh - 16px);
+    overflow: hidden;
+    margin: 0;
+    padding-top: 0;
+  }
+  body.guide-open .bot-dock.is-open .py-chat {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    min-height: 0;
+    margin: 0;
+    overflow: hidden;
+  }
+  body.guide-open .bot-dock.is-open .py-chat-log {
+    flex: 1 1 auto;
+    min-height: 48px;
+    max-height: none;
+  }
+  body.guide-open .bot-dock.is-open .py-chat-form {
+    flex: 0 0 auto;
+    background: #fff;
+  }
 }
 @media (max-width: 520px) {
   .track-tile { padding-right: 12px; }
