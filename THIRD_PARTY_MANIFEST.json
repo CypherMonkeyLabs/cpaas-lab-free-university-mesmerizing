@@ -30,11 +30,11 @@
         },
         {
           "path": "shared/pybot-chat/ui.js",
-          "sha256": "071951475e4f78810028dc8d6a69848ccd0fee3fb881d0f2d48cf43be57c54c3"
+          "sha256": "b5f701f3ab621b17bfa4061224d20a119f453b48aa3a45cefd9e349001e67afc"
         },
         {
           "path": "shared/pybot-chat/chat.css",
-          "sha256": "5c8256b00d40b03f1c19ddc804679397ffb8c9b12932887fca4c2a4f1cf63268"
+          "sha256": "902842e93497b344e6e1f57aa4768498b7372bee4295f0f5d1f18d54a42793ee"
         }
       ]
     }

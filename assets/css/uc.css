@@ -774,8 +774,8 @@ main, .wrap, .go-deeper, .lede, .go-deeper a, .go-deeper li {
     overflow: hidden;
   }
   body.guide-open .bot-dock.is-open .py-chat-log {
-    flex: 1 1 auto;
-    min-height: 48px;
+    flex: 1 1 140px;
+    min-height: 140px;
     max-height: none;
   }
   body.guide-open .bot-dock.is-open .py-chat-form {

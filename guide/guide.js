@@ -120,9 +120,10 @@
         dock.style.bottom = "8px";
       } else {
         var phone = document.querySelector(".phone-bar");
-        var phoneTop = phone ? phone.getBoundingClientRect().top : window.innerHeight;
+        var barBox = phone ? phone.getBoundingClientRect() : null;
+        var phoneTop = barBox && barBox.height > 0 ? barBox.top : window.innerHeight;
         var topLimit = Math.round(guardBottom() + 12);
-        var maxH = Math.max(180, phoneTop - 12 - topLimit);
+        var maxH = Math.max(280, phoneTop - 12 - topLimit);
         panel.style.maxHeight = maxH + "px";
         dock.style.maxHeight = maxH + "px";
         dock.style.top = topLimit + "px";

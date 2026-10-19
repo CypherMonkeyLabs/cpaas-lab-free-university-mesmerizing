@@ -25,9 +25,9 @@
 .py-chat > .bp-link { flex: 0 0 auto; }
 .bp-scroll { overflow: auto; min-height: 0; flex: 1 1 auto; }
 .py-chat-log {
-  max-height: 112px;
+  max-height: 220px;
   min-height: 0;
-  flex: 0 1 auto;
+  flex: 1 1 auto;
   overflow: auto;
   display: flex;
   flex-direction: column;
@@ -92,8 +92,17 @@
 @media (min-width: 900px) {
   .py-chat-log { max-height: 168px; }
 }
+@media (max-width: 800px) {
+  .py-chat-log {
+    min-height: 140px;
+    max-height: none;
+    flex: 1 1 140px;
+  }
+}
+.py-chat.py-chat-answered .py-chat-try,
+.py-chat.py-chat-answered .py-chat-examples,
+.py-chat.py-chat-answered .py-chat-chips { display: none; }
 @media (max-width: 420px) {
-  .py-chat-log { max-height: 88px; }
   .py-chat-form button[type="submit"] { padding-inline: 8px; }
 }
 @media (max-height: 560px) {
@@ -120,8 +129,8 @@
     line-height: 1.2;
   }
   .py-chat-log {
-    flex: 1 1 auto;
-    min-height: 48px;
+    flex: 1 1 140px;
+    min-height: 140px;
     max-height: none;
     overflow: auto;
     padding: 4px 6px;

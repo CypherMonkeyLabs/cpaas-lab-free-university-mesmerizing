@@ -15,6 +15,14 @@ async function shot(page, name) {
   await page.screenshot({ path: path.join(shotDir, name), fullPage: false });
 }
 
+async function expectAnswerLog(page) {
+  const log = page.locator(".py-chat-log");
+  await expect(log).toBeVisible();
+  expect((await log.boundingBox()).height).toBeGreaterThanOrEqual(120);
+  await expect(page.locator(".py-chat-chips")).toBeHidden();
+  await expect(page.locator(".py-chat-examples")).toBeHidden();
+}
+
 test.describe("desktop", () => {
   test.use({ viewport: { width: 1440, height: 900 } });
   test("home, bot, lesson", async ({ page }) => {
@@ -47,6 +55,12 @@ test.describe("phone", () => {
     await expect(input).toBeVisible();
     await expect(send).toBeVisible();
     expect((await input.boundingBox()).width).toBeGreaterThanOrEqual(180);
+    await input.fill("what is SIP");
+    await send.click();
+    await expect(page.locator(".py-msg-bot").last()).toContainText(/SIP/);
+    await expectAnswerLog(page);
+    await expect(input).toBeVisible();
+    await expect(send).toBeVisible();
     await shot(page, "bot-390.png");
     await page.goto("/rooms/sip-jobs.html");
     await expect(page.locator("main h1")).toContainText(/SIP/);
@@ -103,6 +117,7 @@ test.describe("short phone", () => {
     await input.fill("what is SIP");
     await send.click();
     await expect(page.locator(".py-msg-bot").last()).toContainText(/SIP/);
+    await expectAnswerLog(page);
     await expect(input).toBeVisible();
     await shot(page, "bot-390x430.png");
   });

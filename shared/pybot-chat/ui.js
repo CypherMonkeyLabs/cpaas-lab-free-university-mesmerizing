@@ -76,6 +76,7 @@ export function paintChat(root, messages, busy) {
   });
   if (busy) log.appendChild(el("p", "py-msg py-msg-bot py-msg-wait", "Looking through the lab…"));
   log.scrollTop = log.scrollHeight;
+  root.classList.toggle("py-chat-answered", messages.length > 0);
   const last = [...messages].reverse().find((msg) => msg.role === "bot" && msg.follow);
   chips.replaceChildren();
   if (last && last.follow) {
