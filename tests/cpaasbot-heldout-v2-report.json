@@ -2,19 +2,19 @@
   "questions": 102,
   "beginner": {
     "total": 40,
-    "relevant": 21,
-    "relevantPct": 52.5,
-    "confidentWrong": 3,
-    "fallback": 13,
-    "fallbackPct": 32.5
+    "relevant": 19,
+    "relevantPct": 47.5,
+    "confidentWrong": 2,
+    "fallback": 17,
+    "fallbackPct": 42.5
   },
   "typo": {
     "total": 15,
     "relevant": 7,
     "relevantPct": 46.7,
-    "confidentWrong": 2,
-    "fallback": 2,
-    "fallbackPct": 13.3
+    "confidentWrong": 1,
+    "fallback": 3,
+    "fallbackPct": 20
   },
   "offtopic": {
     "total": 15,
@@ -66,18 +66,6 @@
       "text": "An IVR, in the encyclopedia, gathers and routes. TwiML is one vendor's XML for telling Twilio what to do on a call. Say speaks. Play plays a file. Gather collects input. Dial, Queu"
     },
     {
-      "id": "b16",
-      "q": "what sentence defines a communications platform",
-      "href": "rooms/browser-and-mesh.html",
-      "text": "Four open projects, four jobs. Jitsi is a conferencing stack and a public meet service. LiveKit, already cited, is rooms, agents, and telephony. Matrix is a federated protocol and "
-    },
-    {
-      "id": "t12",
-      "q": "dtmf digts",
-      "href": "rooms/offer-answer.html",
-      "text": "Offer and answer are how two ends agree on media. SDP is the description. The tel URI is a way to write a telephone number. DTMF digits, when carried in RTP, have their own payload"
-    },
-    {
       "id": "t13",
       "q": "observabilty counts",
       "href": "tracks/T10.html",
@@ -101,7 +89,7 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: RTP, SRTP, and WebRTC; A ladder you are allowed to draw. I only answer from this lab's lessons. You can also use Search."
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b03",
@@ -125,7 +113,7 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: How a guide tells you to get a number; E.164 numbers and direct inward dial. I only answer from this lab's lessons. You can also use Search."
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b06",
@@ -161,7 +149,7 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: 10DLC is a name on the compliance pages; Webhooks come inbound. I only answer from this lab's lessons. You can also use Search."
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b11",
@@ -204,12 +192,12 @@
       "group": "beginner",
       "q": "what sentence defines a communications platform",
       "relevant": false,
-      "confidentWrong": true,
+      "confidentWrong": false,
       "clean": false,
-      "href": "rooms/browser-and-mesh.html",
-      "mode": "answer",
-      "intent": "",
-      "text": "Four open projects, four jobs. Jitsi is a conferencing stack and a public meet service. LiveKit, already cited, is rooms, agents, and telephony. Matrix is a federated protocol and "
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b17",
@@ -221,7 +209,7 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: Voice and video names that opened; Bridges the open pages actually name. I only answer from this lab's lessons. You can also use Search."
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b19",
@@ -242,10 +230,22 @@
       "relevant": false,
       "confidentWrong": false,
       "clean": false,
-      "href": "rooms/no-secrets.html",
-      "mode": "answer",
-      "intent": "",
-      "text": "The practical rule is small. Tokens, signing keys, and message bodies stay out of git and out of this lab. The Twilio security title shows there is a docs section. It does not, in "
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b22",
+      "group": "beginner",
+      "q": "which counts are safe to repeat from an opened page",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b23",
@@ -269,7 +269,19 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: Contact center words that stay general; What the CPaaS section actually says. I only answer from this lab's lessons. You can also use Search."
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
+    },
+    {
+      "id": "b30",
+      "group": "beginner",
+      "q": "what habit should I keep with a phone number",
+      "relevant": false,
+      "confidentWrong": false,
+      "clean": false,
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b34",
@@ -281,7 +293,7 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: Avaya, UCCE, and the pages that did not open; AI voice agents, only the sentences that opened. I only answer from this lab's lessons. You can "
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b35",
@@ -305,7 +317,7 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: RTP, SRTP, and WebRTC; Webhooks come inbound. I only answer from this lab's lessons. You can also use Search."
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "b38",
@@ -372,12 +384,12 @@
       "group": "typo",
       "q": "dtmf digts",
       "relevant": false,
-      "confidentWrong": true,
+      "confidentWrong": false,
       "clean": false,
-      "href": "rooms/offer-answer.html",
-      "mode": "answer",
-      "intent": "",
-      "text": "Offer and answer are how two ends agree on media. SDP is the description. The tel URI is a way to write a telephone number. DTMF digits, when carried in RTP, have their own payload"
+      "href": "",
+      "mode": "fallback",
+      "intent": "fallback",
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     },
     {
       "id": "t13",
@@ -465,7 +477,7 @@
       "href": "",
       "mode": "fallback",
       "intent": "fallback",
-      "text": "I don't have that yet. Closest pages: Contact center words that stay general; TwiML verbs and what an IVR is. I only answer from this lab's lessons. You can also use Search."
+      "text": "I don't have that yet. I only answer from this lab's lessons. You can also use Search."
     }
   ]
 }
